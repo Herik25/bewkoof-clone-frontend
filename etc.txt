@@ -1,0 +1,33 @@
+formula to calculate price from the discount : Math.round(product.price * (1-product.discount/100))\
+
+json obj structure : 
+        {
+            "id": ,
+            "brand": "",
+            "name": "",
+            "thumbnail": "",
+            "imageAlt": "",
+            "images": [],
+            "price": ,
+            "discountPrice": ,
+            "discount": ,
+            "tags": [],
+            "tagscolors": "",
+            "imgTag": "",
+            "imgTagColor": "",
+            "rating": "",
+            "gender": "",
+            "category": "",
+            "size": "",
+            "color": "",
+            "bestseller" : ""
+        }
+=> if you want to remove men women and all functionility from the navbar
+product list 147-162 : remove every if statements 
+navbar 17-22 : remove hanldeGenderClick()
+
+order date and delivery date on checkout
+
+filtersection on product list
+
+admin product detail sizes.map onclick and cursor (i have to implement on productDetail)
