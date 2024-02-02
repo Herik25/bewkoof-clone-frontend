@@ -1,108 +1,96 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FiHeart } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { fetchAllProductsAsync, selectAllProducts } from "../features/products/ProductSlice";
 
 function BestSeller() {
-  const products = [
-    {
-      desc: "Women's Cute Bunny OverSize T-shirt",
-      price: "1100",
-      discount: "40",
-      img: "https://images.bewakoof.com/t320/women-s-purple-fairytale-bunny-graphic-printed-oversized-t-shirt-519259-1694765992-1.jpg",
-    },
-    {
-      desc: "Men's Black I Need Some Space Teddy Graphic Printed T-shirt",
-      price: "999",
-      discount: "60",
-      img: "https://images.bewakoof.com/t1080/men-s-black-i-need-some-space-teddy-graphic-printed-t-shirt-496045-1694763737-1.jpg",
-    },
-    {
-      desc: "Women's White Avoiding Responsibilities Graphic Printed Boyfriend T-shirt",
-      price: "1099",
-      discount: "65",
-      img: "https://images.bewakoof.com/t1080/women-s-white-avoiding-responsibilities-graphic-printed-boyfriend-t-shirt-585772-1682403802-1.jpg",
-    },
-    {
-      desc: "Men's Black Oversized T-shirt",
-      price: "799",
-      discount: "31",
-      img: "https://images.bewakoof.com/t1080/men-s-black-oversized-t-shirt-439421-1679048737-1.jpg",
-    },
-    {
-      desc: "Women's Black Chibi Naruto Graphic Printed Oversized Short Top",
-      price: "1449",
-      discount: "58",
-      img: "https://images.bewakoof.com/t1080/women-s-black-chibi-naruto-graphic-printed-oversized-short-top-603169-1697543032-1.jpg",
-    },
-    {
-      desc: "Women's Black Don't Even Trip Dawg Graphic Printed Oversized Short Top",
-      price: "1449",
-      discount: "62",
-      img: "https://images.bewakoof.com/t1080/women-don-t-even-trip-dawg-oversize-graphic-printed-top-605121-1693306771-3.jpg",
-    },
-  ];
+ 
+  const dispatch = useDispatch()
+  const products = useSelector(selectAllProducts);
+  const bestSellerProducts = products.filter(
+    (product) => product.bestseller === true
+  ).slice(0, 6)
+  
+  useEffect(() => {
+    dispatch(fetchAllProductsAsync())
+  }, [dispatch])
 
-    const renderedProducts = products.map((product, index) => {
+  const renderedProducts = bestSellerProducts.map((product, index) => {
     return (
-      <div key={index} className=" bg-white h-[335px] w-[200px] rounded-lg border">
+      <Link
+        key={index}
+        className="bg-white h-[350px] w-full sm:w-[200px] md:w-[250px] rounded-lg border mx-3"
+        to={`/all-products/productdetail/${product.id}`}
+      >
         <img
-          src={product.img}
+          className="w-full h-[250px] object-cover rounded-t-lg"
+          src={product.thumbnail}
           alt="img"
         />
-        <div className=" flex flex-col font-poppins p-1 pt-2">
-          <div className=" flex justify-between">
-            <div className=" font-bold text-sm text-[#444] pb-[2px]">
+        <div className="flex flex-col font-poppins p-2">
+          <div className="flex justify-between items-center">
+            <div className="font-bold text-sm text-[#444]">
               Bewakoof®
             </div>
-            <div className=" pr-2 text-lg text-[#333]">
+            <div className="pr-2 text-lg text-[#333]">
               <FiHeart />
             </div>
           </div>
-          <div className=" text-[10px] text-[#444] max-w-[160px] whitespace-nowrap overflow-hidden text-ellipsis pb-[2px]">
-            {product.desc}
+          <div className="text-sm md:text-[10px] text-[#444] max-w-[160px] whitespace-nowrap overflow-hidden text-ellipsis pb-2">
+            {product.name}
           </div>
-          <div className=" flex items-center">
-            <div className=" font-Krala text-lg text-[#333] pr-2">
-              ₹<span className=" font-bold">{product.price}</span>
+          <div className="flex items-center">
+            <div className="font-Krala text-lg text-[#333] pr-2">
+              ₹<span className="font-bold">{product.price}</span>
             </div>
-            <div className=" line-through text-sm text-[#888] pr-2 font-Krala">
+            <div className="line-through text-sm text-[#888] pr-2 font-Krala">
               ₹<span>{product.discountPrice}</span>
             </div>
-            <div className=" text-green-400 text-sm font-bold">{product.discount}% OFF</div>
+            <div className="text-green-400 text-sm font-bold">
+              {product.discount}% OFF
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     );
   });
 
+  const naviagate = useNavigate()
+
   return (
     <div>
-      <h1 className=" font-Krala font-bold text-center text-2xl py-5">
+      <h1 className="font-Krala font-bold text-center text-lg sm:text-xl md:text-2xl lg:text-3xl py-3 sm:py-5">
         OUR BEST PICKS
       </h1>
-      <div className=" flex w-full">
+      <div className=" flex flex-col w-full sm:flex-col md:flex-row lg:flex-row xl:flex-row">
         <img
-          className=" w-[50%] p-1 pb-0"
+          className=" w-full p-1 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2 md:pb-0 lg:pb-0 xl:pb-0"
           src="https://images.bewakoof.com/uploads/grid/app/sale-midsize-desktop-banner-buy-3-at-999-1698766262.jpg"
+          onClick={() => naviagate('/all-products')}
         />
         <img
-          className=" w-[50%] p-1 pl-0 pb-0"
+          className=" w-full p-1 pl-0 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2 md:pb-0 lg:pb-0 xl:pb-0"
           src="https://images.bewakoof.com/uploads/grid/app/desktop-mid-size-banner-air-1692257835.jpg"
+          onClick={() => naviagate('/all-products')}
         />
       </div>
-      <div className=" flex w-full">
+      <div className=" flex flex-col w-full sm:flex-col md:flex-row lg:flex-row xl:flex-row">
         <img
-          className=" w-[50%] p-1"
+          className=" w-full p-1 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2"
           src="https://images.bewakoof.com/uploads/grid/app/sale-midsize-desktop-banner-B1G1-FREE-1698766263.jpg"
+          onClick={() => naviagate('/all-products')}
         />
         <img
-          className=" w-[50%] p-1 pl-0"
+          className=" w-full p-1 pl-0 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2"
           src="https://images.bewakoof.com/uploads/grid/app/mid-size-hygiene-revamp-customise-model-desktop-new-1689142924.jpg"
+          onClick={() => naviagate('/all-products')}
         />
       </div>
-      <h1 className=" font-Krala font-bold text-center text-2xl py-5 bg-[#fbf5ff]">
+      <h1 className="font-Krala font-bold text-center text-lg sm:text-xl md:text-2xl lg:text-3xl py-3 sm:py-5">
         BESTSELLERS
       </h1>
-      <div className=" flex justify-around bg-[#fbf5ff] w-full h-[400px] p-5">
+      <div className=" overflow-y-auto no-scrollbar flex justify-start items-center bg-[#fbf5ff] w-full h-[400px] p-5">
         {renderedProducts}
       </div>
     </div>

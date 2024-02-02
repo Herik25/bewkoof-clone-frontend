@@ -31,6 +31,22 @@ export function loginUser(loginInfo) {
   });
 }
 
+export function logOut() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch("/auth/logout");
+      if (response.ok) {
+        resolve({ data: "success" });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
 export function checkAuth() {
   return new Promise(async (resolve, reject) => {
     try {

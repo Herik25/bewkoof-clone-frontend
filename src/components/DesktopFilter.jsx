@@ -23,7 +23,7 @@ function DesktopFilter({ filters, filterArray, handleFilter, filterSection }) {
                   <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                     <span className=" flex items-center text-[#374151] font-Montserrat text-[16px]">
                       {section.name}
-                      { filterSection?.includes(section.name) && (
+                      {filterSection?.includes(section.name) && (
                         <div className=" h-2 w-2 translate-y-[1px] ml-1 bg-[#3d9999] rounded-full"></div>
                       )}
                     </span>
@@ -54,13 +54,13 @@ function DesktopFilter({ filters, filterArray, handleFilter, filterSection }) {
                           ></div>
                         )}
                         <input
-                          id={`filter-${section.id}-${optionIdx}`}
+                          id={`filter-mobile-${section.id}-${optionIdx}`}
                           name={`${section.id}[]`}
                           defaultValue={option.value}
                           type="checkbox"
                           defaultChecked={option.checked}
-                          // if you want to put the checkbox then put onchange and handle filter func here
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 hidden opacity-0 pointer-events-none"
+                          //onchange handlefilter
+                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                         />
                         <label
                           htmlFor={`filter-${section.id}-${optionIdx}`}

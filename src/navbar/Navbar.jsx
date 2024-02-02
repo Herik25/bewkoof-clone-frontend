@@ -18,16 +18,16 @@ function Navbar() {
 
   return (
     <div className="fixed top-0 z-50 w-full bg-white border-b-[1px] border-gray-400">
-      <div className="flex mt-1 pb-3 h-[55px] w-full items-center justify-around p-2">
+      <div className="flex mt-1 pb-3 h-[55px] w-full items-center justify-between p-2 md:justify-around lg:justify-around">
         <div className="flex items-center">
           <Link to='/' className=" flex items-center">
             <img src="/logo.png" className="h-10 w-10 p-1" alt="Logo" />
-            <div className="font-BungeeSpice text-4xl mt-0 pl-2 translate-y-[1px]">
+            <div className="font-BungeeSpice text-2xl mt-0 pl-2 translate-y-[1px] lg:text-4xl">
               SYN
             </div>
           </Link>
           <div className="pl-20">
-            <ul className="flex items-center list-none text-[#292929]">
+            <ul className="hidden items-center list-none text-[#292929] md:flex lg:flex">
               {
                 <Link
                   to="/men-products"
@@ -82,10 +82,10 @@ function Navbar() {
         </div>
         <div className="relative flex items-center">
           <input
-            className="bg-[#e7e7e7] mr-5 rounded-md w-[250px] border-none outline-none p-2 text-[13px]"
+            className=" hidden bg-[#e7e7e7] mr-5 rounded-md w-[250px] border-none outline-none p-2 text-[13px] md:block lg:block"
             placeholder="Search"
           />
-          <div className="bg-[#585858] h-7 w-[1px]"></div>
+          <div className=" hidden bg-[#585858] h-7 w-[1px] md:block lg:block"></div>
           <ul className="ml-4 font-poppins flex items-center">
             <li className="pr-2">
               {user === null || user.message === 'Unauthorized' ? (
@@ -135,7 +135,7 @@ function Navbar() {
                         </Link>
                       )}
                       <Link
-                        to='/signout'
+                        to='/logout'
                         className=" hover:bg-[#f5f5f5] py-4 px-5 w-full cursor-pointer"
                       >
                         Log Out

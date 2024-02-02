@@ -32,6 +32,16 @@ import AdminProductEditForm from "./features/admin/components/AdminProductEditFo
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Logout from "./components/Logout";
+import MenJoggersPage from "./pages/CategoriesPages/MenJoggersPage";
+import MenShortsPage from "./pages/CategoriesPages/MenShortsPage";
+import MenVestsPage from "./pages/CategoriesPages/MenVestsPage";
+import MenProductList from "./components/MenProductList";
+import MenTshirtsPage from "./pages/CategoriesPages/MenTshirtsPage";
+import WomenTshirtsPage from "./pages/CategoriesPages/WomenTshirtsPage";
+import WomenTopsPage from "./pages/CategoriesPages/WomenTopsPage";
+import WomenJoggersPage from "./pages/CategoriesPages/WomenJoggersPage";
+import WomenDressesPage from "./pages/CategoriesPages/WomenDressesPage";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +87,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/logout",
+    element: <Logout />,
   },
   {
     path: "/signup",
@@ -147,8 +161,40 @@ const router = createBrowserRouter([
     element: <MenProducts />,
   },
   {
+    path: "/men-joggers",
+    element: <MenJoggersPage />,
+  },
+  {
+    path: "/men-shorts",
+    element: <MenShortsPage />,
+  },
+  {
+    path: "/men-vests",
+    element: <MenVestsPage />,
+  },
+  {
+    path: "/men-tshirts",
+    element: <MenTshirtsPage />,
+  },
+  {
     path: "/women-products",
-    element: <WomenProducts />,
+    element: <WomenProducts />
+  },
+  {
+    path: "/women-tshirts",
+    element: <WomenTshirtsPage />
+  },
+  {
+    path: "/women-tops",
+    element: <WomenTopsPage />
+  },
+  {
+    path: "/women-joggers",
+    element: <WomenJoggersPage />
+  },
+  {
+    path: "/women-dresses",
+    element: <WomenDressesPage />
   },
   {
     path: "/aboutus",

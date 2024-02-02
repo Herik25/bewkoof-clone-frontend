@@ -4,8 +4,8 @@ const skeletonLoaderProductList = () => {
   return (
     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
       {[...Array(12)].map((_, index) => (
-        <div key={index} className="col-sm-6 col-md-3 mb-4">
-          <div className="h-96 max-w-[270px] rounded-md ">
+        <div key={index} className=" flex justify-center col-sm-6 col-md-3 mb-4">
+          <div className=" h-96 w-[270px] rounded-md">
             <div className=" h-80 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 animate-gradient"></div>
             <div className="bg-white py-4 flex items-center justify-center">
               <div className="flex-shrink-0 w-full">

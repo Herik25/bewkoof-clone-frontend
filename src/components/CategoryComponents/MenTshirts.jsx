@@ -18,20 +18,15 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   TotalCount,
-  fetchAllMensProductsAsync,
-  fetchAllProductsAsync,
-  fetchAllWomensProductsAsync,
-  fetchMenProductsByFiltersAsync,
-  fetchProductsByFiltersAsync,
-  fetchWomenProductsByFiltersAsync,
+  fetchAllMensTshirtsAsync,
+  fetchAllMensTshirtsByFilterAsync,
   selectAllProducts,
   selectProductListStatus,
-} from "../features/products/ProductSlice";
-import MobileFilter from "./MobileFilter";
-import DesktopFilter from "./DesktopFilter";
-import ProductGrid from "./ProductGrid";
-import { fetchAllMensProducts } from "../features/products/ProductApi";
-import SkeletonLoaderProductList from "./SkeletonLoaderProductList";
+} from "../../features/products/ProductSlice";
+import MobileFilter from "../MobileFilter";
+import DesktopFilter from "../DesktopFilter";
+import ProductGrid from "../ProductGrid";
+import SkeletonLoaderProductList from "../SkeletonLoaderProductList";
 
 const sortOptions = [
   { name: "Newest", sort: "#", current: false },
@@ -44,8 +39,7 @@ const filters = [
     id: "category",
     name: "Category",
     options: [
-      { value: "tshirt", label: "T-Shirt", checked: false },
-      { value: "top", label: "top", checked: false },
+      { value: "tshirt", label: "T-Shirt", checked: true },
       { value: "boxer", label: "Boxer", checked: false },
       { value: "vest", label: "Vest", checked: false },
       { value: "jeans", label: "Jeans", checked: false },
@@ -61,7 +55,6 @@ const filters = [
       { value: "sweater", label: "Sweater", checked: false },
       { value: "tracksuit", label: "Tracksuit", checked: false },
       { value: "casualpants", label: "Casual Pants", checked: false },
-      { value: "dress", label: "Dress", checked: false },
     ],
   },
   {
@@ -99,7 +92,7 @@ const filters = [
     id: "brand",
     name: "Brand",
     options: [
-      { value: "bewkoof", label: "Bewkoof", checked: false },
+      { value: "Bewakoof®", label: "Bewkoof", checked: false },
       { value: "bewkoofhd ", label: "Bewkoof Heavy Duty @1.0", checked: false },
     ],
   },
@@ -138,29 +131,27 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function WomenProductList() {
+function MenTshirts() {
   const dispatch = useDispatch();
   const products = useSelector(selectAllProducts);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [sort, setSort] = useState("");
-  const [filter, setFilter] = useState({});
+  const [filter, setFilter] = useState({category: "tshirt",});
   const [filterSection, setFilterSection] = useState([]);
   const filterArray = Object.values(filter);
   const totalCount = useSelector(TotalCount);
   const productListStatus = useSelector(selectProductListStatus)
 
   useEffect(() => {
-    dispatch(fetchAllWomensProductsAsync());
+    dispatch(fetchAllMensTshirtsAsync());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(fetchWomenProductsByFiltersAsync(filter));
+    dispatch(fetchAllMensTshirtsByFilterAsync(filter));
   }, [filter, dispatch]);
 
   const handleFilter = (e, section, option) => {
     e.preventDefault();
-    setFilterSection(section.name);
     let newFilter = {};
     const isOptionSelected = filterArray.includes(option.value);
     if (isOptionSelected) {
@@ -183,7 +174,6 @@ export default function WomenProductList() {
   };
 
   const handleSort = (e, option) => {
-    setSort(option.name);
     const newFilter = { ...filter, _sort: option.sort, _order: option.order };
     setFilter(newFilter);
   };
@@ -202,22 +192,19 @@ export default function WomenProductList() {
           <div className="flex items-baseline justify-between pb-6 pt-20">
             <div>
               <h1 className="text-2xl font-bold tracking-tight text-gray-900 pb-2">
-                Women's Clothing{" "}
+                Men's Clothing{" "}
                 <span className=" ml-1 text-2xl text-[#949494] font-Montserrat font-medium">
                   ({totalCount})
                 </span>
               </h1>
-              <div className="h-[2px] w-[150px] bg-yellow-400"></div>
+              <div className="h-[2px] w-[120px] bg-yellow-400"></div>
             </div>
 
             <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="group inline-flex justify-center text-xs font-bold text-[#2d2d2d] hover:text-gray-900">
-                    <span className=" font-bold opacity-50">
-                      SORT BY &nbsp;
-                    </span>{" "}
-                    {sort}
+                  <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+                    Sort
                     <ChevronDownIcon
                       className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
@@ -242,8 +229,8 @@ export default function WomenProductList() {
                             <p
                               onClick={(e) => handleSort(e, option)}
                               className={classNames(
-                                sort === option.name
-                                  ? "font-medium text-[#3d9999]"
+                                option.current
+                                  ? "font-medium text-gray-900"
                                   : "text-gray-500",
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm"
@@ -316,3 +303,6 @@ export default function WomenProductList() {
     </div>
   );
 }
+
+
+export default MenTshirts

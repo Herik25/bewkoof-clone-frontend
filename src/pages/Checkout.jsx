@@ -52,10 +52,7 @@ function Checkout() {
     fetch("/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ totalPrice: totalPrice }),
-      meta: {
-        order_id: currentOrder?.id,
-      },
+      body: JSON.stringify({ totalPrice: totalPrice })
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));

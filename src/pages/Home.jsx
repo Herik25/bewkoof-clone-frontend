@@ -10,7 +10,7 @@ import Hero from '../components/Hero'
 
 function Home() {
   return (
-    <div>
+    <div className=' overflow-hidden'>
       <Navbar />
       <Hero />
       <Sec1 />

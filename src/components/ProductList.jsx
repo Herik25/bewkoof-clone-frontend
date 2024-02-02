@@ -27,6 +27,7 @@ import MobileFilter from "./MobileFilter";
 import DesktopFilter from "./DesktopFilter";
 import ProductGrid from "./ProductGrid";
 import SkeletonLoaderProductList from "./SkeletonLoaderProductList";
+import Footer from "./Footer";
 
 const sortOptions = [
   { name: "Newest", sort: "#", current: false },
@@ -64,6 +65,7 @@ const filters = [
       { value: "sweater", label: "Sweater", checked: false },
       { value: "tracksuit", label: "Tracksuit", checked: false },
       { value: "casualpants", label: "Casual Pants", checked: false },
+      { value: "dress", label: "Dress", checked: false },
     ],
   },
   {
@@ -201,6 +203,9 @@ export default function ProductList() {
           mobileFiltersOpen={mobileFiltersOpen}
           setMobileFiltersOpen={setMobileFiltersOpen}
           filters={filters}
+          filterArray={filterArray}
+          handleFilter={handleFilter}
+          filterSection={filterSection}
         />
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between pb-6 pt-20">
@@ -287,7 +292,7 @@ export default function ProductList() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              <div className="sticky top-20 h-screen overflow-scroll no-scrollbar">
+              <div className="fixed top-20 h-screen overflow-scroll no-scrollbar md:sticky lg:sticky xl:sticky">
                 <DesktopFilter
                   filters={filters}
                   filterArray={filterArray}
@@ -298,7 +303,7 @@ export default function ProductList() {
 
               {/* Product grid */}
               <div className="lg:col-span-3">
-                {productListStatus === 'loading' ? (
+                {productListStatus === "loading" ? (
                   <SkeletonLoaderProductList />
                 ) : (
                   <ProductGrid products={products} />
@@ -317,6 +322,7 @@ export default function ProductList() {
           </section>
         </main>
       </div>
+      <Footer />
     </div>
   );
 }

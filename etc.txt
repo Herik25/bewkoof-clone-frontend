@@ -31,3 +31,11 @@ order date and delivery date on checkout
 filtersection on product list
 
 admin product detail sizes.map onclick and cursor (i have to implement on productDetail)
+
+all responsive design 
+
+home,jsx
+overflow-hidden
+
+navbar.jsx
+md lg
