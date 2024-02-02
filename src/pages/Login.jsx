@@ -29,8 +29,8 @@ function Login() {
     <>
       {user && <Navigate to="/" replace={true} />}
       <Navbar />
-      <div className=" flex h-screen overflow-hidden">
-        <div className=" flex flex-col items-center justify-between mt-[60px] bg-gradient-to-t p-6 from-yellow-100 from-10% to-white to-90%">
+      <div className="flex flex-col md:flex-row h-screen overflow-hidden">
+        <div className=" hidden flex-col items-center justify-between mt-[60px] bg-gradient-to-t p-6 from-yellow-100 from-10% to-white to-90% md:flex">
           <div>
             <h1 className=" font-Montserrat font-extrabold text-[30px] m-5">
               Welcome to the world of Super Sayan
@@ -41,24 +41,24 @@ function Login() {
             <img
               src="https://images.bewakoof.com/web/group-19-1617704502.png"
               alt="image"
-              className=" h-[400px] w-[100%] px-10"
+              className=" h-[200px] w-[100%] px-10 md:h-[300px] lg:h-[400px]"
             />
           </div>
         </div>
-        <div className=" my-5">
+        <div className=" md:w-1/2">
           {forgotPass && <ForgotPassword forgotPass={forgotPass} setForgotPass={setForgotPass} />}
-          <div className=" flex flex-col items-center justify-evenly py-8 h-screen w-[700px]">
+          <div className=" flex flex-col items-center justify-evenly py-8 h-screen w-full">
             <div>
-              <div className=" font-Montserrat font-bold text-[24px] text-center p-2">
+              <div className=" font-Montserrat font-bold text-lg text-center p-2 md:text-xl lg:text-2xl">
                 Log In / Sign Up
               </div>
-              <span className=" font-Montserrat font-bold text-[18px] text-[#a0a0a0]">
+              <span className=" font-Montserrat font-bold text-sm text-[#a0a0a0] md:text-base lg:text-lg">
                 for Latest trends, exciting offers and everything SYN
                 <sup className=" text-[12px]">®</sup>!
               </span>
             </div>
             <form
-              className=" flex flex-col p-8 items-center w-[400px]"
+              className=" flex flex-col p-8 items-center max-w-[400px] w-full"
               onSubmit={handleSubmit((data) => {
                 dispatch(
                   loginUserAsync({
@@ -80,7 +80,7 @@ function Login() {
                   })}
                   id="email"
                   placeholder="example@example.com"
-                  className=" border-gray-400 rounded-md outline-none text-[20px] font-Montserrat p-4 w-full"
+                  className=" border-gray-400 rounded-md outline-none text-lg font-Montserrat p-4 w-full md:text-xl"
                 />
                 {errors.email && (
                   <p className=" text-rose-500 text-xs mt-1 ml-2">
@@ -96,7 +96,7 @@ function Login() {
                   })}
                   id="password"
                   placeholder="password"
-                  className="  border-gray-400 rounded-md outline-none text-[20px] font-Montserrat p-4 w-full"
+                  className="  border-gray-400 rounded-md outline-none text-lg font-Montserrat p-4 w-full md:text-xl"
                 />
                 {error && (
                   <p className=" text-rose-500 text-xs mt-1 ml-2">
@@ -146,16 +146,16 @@ function Login() {
                 </button>
               </div>
             </div>
-            <div className=" font-Montserrat text-xs text-gray-400 w-[400px]">
+            <div className=" absolute bottom-4 font-Montserrat text-xs text-gray-400 max-w-[400px] md:relative">
               <p>
                 By creating an account or logging in, you agree with Bewakoof®'s{" "}
-                <a href="#" className=" text-blue-400">
+                <Link to="/terms" className=" text-blue-400">
                   Terms and Conditions
-                </a>{" "}
+                </Link>{" "}
                 and{" "}
-                <a href="#" className=" text-blue-400">
+                <Link to="/privacy-policy" className=" text-blue-400">
                   Privacy Policy
-                </a>
+                </Link>
                 .
               </p>
             </div>
