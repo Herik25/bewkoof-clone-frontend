@@ -292,7 +292,7 @@ export default function ProductList() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              <div className="fixed top-20 h-screen overflow-scroll no-scrollbar md:sticky lg:sticky xl:sticky">
+              <div className="fixed top-20 h-screen overflow-scroll no-scrollbar md:fixed lg:sticky xl:sticky">
                 <DesktopFilter
                   filters={filters}
                   filterArray={filterArray}

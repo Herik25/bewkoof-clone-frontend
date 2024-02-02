@@ -31,6 +31,7 @@ import MobileFilter from "../MobileFilter";
 import DesktopFilter from "../DesktopFilter";
 import ProductGrid from "../ProductGrid";
 import SkeletonLoaderProductList from "../SkeletonLoaderProductList";
+import Footer from "../Footer";
 
 const sortOptions = [
   { name: "Newest", sort: "#", current: false },
@@ -140,11 +141,11 @@ function MenVests() {
   const products = useSelector(selectAllProducts);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [filter, setFilter] = useState({category: "vest",});
+  const [filter, setFilter] = useState({ category: "vest" });
   const [filterSection, setFilterSection] = useState([]);
   const filterArray = Object.values(filter);
   const totalCount = useSelector(TotalCount);
-  const productListStatus = useSelector(selectProductListStatus)
+  const productListStatus = useSelector(selectProductListStatus);
 
   useEffect(() => {
     dispatch(fetchAllMensVestAsync());
@@ -274,7 +275,7 @@ function MenVests() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              <div className="sticky top-20 h-screen overflow-scroll no-scrollbar">
+              <div className="fixed top-20 h-screen overflow-scroll no-scrollbar md:fixed lg:sticky xl:sticky">
                 <DesktopFilter
                   filters={filters}
                   filterArray={filterArray}
@@ -304,8 +305,9 @@ function MenVests() {
           </section>
         </main>
       </div>
+      <Footer />
     </div>
   );
 }
 
-export default MenVests
+export default MenVests;

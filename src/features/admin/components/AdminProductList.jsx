@@ -28,6 +28,7 @@ import DesktopFilter from "../../../components/DesktopFilter";
 import ProductGrid from "../../../components/ProductGrid";
 import AdminProductGrid from "./AdminProductGrid";
 import SkeletonLoaderProductList from "../../../components/SkeletonLoaderProductList";
+import Footer from "../../../components/Footer";
 
 const sortOptions = [
   { name: "Newest", sort: "#", current: false },
@@ -153,7 +154,7 @@ export default function AdminProductList() {
   const [filterSection, setFilterSection] = useState([]);
   const filterArray = Object.values(filter);
   const totalCount = useSelector(TotalCount);
-  const productListStatus = useSelector(selectProductListStatus)
+  const productListStatus = useSelector(selectProductListStatus);
 
   useEffect(() => {
     dispatch(fetchAllProductsAsync());
@@ -291,7 +292,7 @@ export default function AdminProductList() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              <div className="sticky top-20 h-screen overflow-scroll no-scrollbar">
+              <div className="fixed top-20 h-screen overflow-scroll no-scrollbar md:fixed lg:sticky xl:sticky">
                 <DesktopFilter
                   filters={filters}
                   filterArray={filterArray}
@@ -321,6 +322,7 @@ export default function AdminProductList() {
           </section>
         </main>
       </div>
+      <Footer />
     </div>
   );
 }

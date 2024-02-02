@@ -64,7 +64,7 @@ function Sec1() {
       </div>
       <div>
         <img
-          className="w-full h-24 sm:h-32 md:h-48 lg:h-64 xl:h-80"
+          className="w-full h-24 sm:h-24 md:h-32 lg:h-48 xl:h-56"
           src="https://images.bewakoof.com/uploads/grid/app/brand-strip-1683780891-1684740361.gif"
         />
       </div>

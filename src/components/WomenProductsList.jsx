@@ -32,6 +32,7 @@ import DesktopFilter from "./DesktopFilter";
 import ProductGrid from "./ProductGrid";
 import { fetchAllMensProducts } from "../features/products/ProductApi";
 import SkeletonLoaderProductList from "./SkeletonLoaderProductList";
+import Footer from "./Footer";
 
 const sortOptions = [
   { name: "Newest", sort: "#", current: false },
@@ -148,7 +149,7 @@ export default function WomenProductList() {
   const [filterSection, setFilterSection] = useState([]);
   const filterArray = Object.values(filter);
   const totalCount = useSelector(TotalCount);
-  const productListStatus = useSelector(selectProductListStatus)
+  const productListStatus = useSelector(selectProductListStatus);
 
   useEffect(() => {
     dispatch(fetchAllWomensProductsAsync());
@@ -283,7 +284,7 @@ export default function WomenProductList() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              <div className="sticky top-20 h-screen overflow-scroll no-scrollbar">
+              <div className="fixed top-20 h-screen overflow-scroll no-scrollbar md:fixed lg:sticky xl:sticky">
                 <DesktopFilter
                   filters={filters}
                   filterArray={filterArray}
@@ -313,6 +314,7 @@ export default function WomenProductList() {
           </section>
         </main>
       </div>
+      <Footer />
     </div>
   );
 }

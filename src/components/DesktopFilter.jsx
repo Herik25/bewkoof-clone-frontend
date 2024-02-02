@@ -60,7 +60,7 @@ function DesktopFilter({ filters, filterArray, handleFilter, filterSection }) {
                           type="checkbox"
                           defaultChecked={option.checked}
                           //onchange handlefilter
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 hidden"
                         />
                         <label
                           htmlFor={`filter-${section.id}-${optionIdx}`}

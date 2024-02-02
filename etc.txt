@@ -39,3 +39,7 @@ overflow-hidden
 
 navbar.jsx
 md lg
+
+TODO
+Home Pagee
+top categories responsive

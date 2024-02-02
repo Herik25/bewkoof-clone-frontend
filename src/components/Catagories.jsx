@@ -95,12 +95,12 @@ function Catagories() {
         TRENDING CATEGORIES
       </h1>
       <div className=" overflow-y-auto no-scrollbar mx-0 lg:my-5">
-        <div className="flex items-center justify-start flex-nowrap md:justify-start lg:justify-center">
+        <div className="flex items-center justify-start flex-nowrap">
           {renderedCards1}
         </div>
       </div>
       <div className=" overflow-y-auto no-scrollbar mx-0 lg:my-5">
-        <div className="flex items-center justify-start flex-nowrap md:justify-start lg:justify-center">
+        <div className="flex items-center justify-start flex-nowrap">
           {renderedCards2}
         </div>
       </div>

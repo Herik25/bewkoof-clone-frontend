@@ -119,8 +119,8 @@ function EndingSection() {
       <h1 className="font-Krala font-bold text-center text-lg sm:text-xl md:text-2xl lg:text-3xl py-3 sm:py-5">
         TRENDING CATEGORIES
       </h1>
-      <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-64 overflow-y-auto no-scrollbar">
-        <div className="flex sm:flex-row items-center sm:justify-around my-3">
+      <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-40 overflow-y-auto no-scrollbar">
+        <div className="flex sm:flex-row items-center sm:justify-start my-3">
           {renderedCards}
         </div>
       </div>

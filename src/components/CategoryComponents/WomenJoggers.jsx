@@ -31,6 +31,7 @@ import MobileFilter from "../MobileFilter";
 import DesktopFilter from "../DesktopFilter";
 import ProductGrid from "../ProductGrid";
 import SkeletonLoaderProductList from "../SkeletonLoaderProductList";
+import Footer from "../Footer";
 
 const sortOptions = [
   { name: "Newest", sort: "#", current: false },
@@ -43,24 +44,24 @@ const filters = [
     id: "category",
     name: "Category",
     options: [
-        { value: "tshirt", label: "T-Shirt", checked: false },
-        { value: "top", label: "top", checked: false },
-        { value: "boxer", label: "Boxer", checked: false },
-        { value: "vest", label: "Vest", checked: false },
-        { value: "jeans", label: "Jeans", checked: false },
-        { value: "shirt", label: "Shirt", checked: false },
-        { value: "shorts", label: "Shorts", checked: false },
-        { value: "sweatshirt", label: "Sweatshirt", checked: false },
-        { value: "joggers", label: "Joggers", checked: true },
-        { value: "hoodies", label: "Hoodies", checked: false },
-        { value: "pyjama", label: "Pyjama", checked: false },
-        { value: "jacket", label: "Jacket", checked: false },
-        { value: "trousers", label: "Trousers", checked: false },
-        { value: "trackpant", label: "Track Pant", checked: false },
-        { value: "sweater", label: "Sweater", checked: false },
-        { value: "tracksuit", label: "Tracksuit", checked: false },
-        { value: "casualpants", label: "Casual Pants", checked: false },
-        { value: "dress", label: "Dress", checked: false },
+      { value: "tshirt", label: "T-Shirt", checked: false },
+      { value: "top", label: "top", checked: false },
+      { value: "boxer", label: "Boxer", checked: false },
+      { value: "vest", label: "Vest", checked: false },
+      { value: "jeans", label: "Jeans", checked: false },
+      { value: "shirt", label: "Shirt", checked: false },
+      { value: "shorts", label: "Shorts", checked: false },
+      { value: "sweatshirt", label: "Sweatshirt", checked: false },
+      { value: "joggers", label: "Joggers", checked: true },
+      { value: "hoodies", label: "Hoodies", checked: false },
+      { value: "pyjama", label: "Pyjama", checked: false },
+      { value: "jacket", label: "Jacket", checked: false },
+      { value: "trousers", label: "Trousers", checked: false },
+      { value: "trackpant", label: "Track Pant", checked: false },
+      { value: "sweater", label: "Sweater", checked: false },
+      { value: "tracksuit", label: "Tracksuit", checked: false },
+      { value: "casualpants", label: "Casual Pants", checked: false },
+      { value: "dress", label: "Dress", checked: false },
     ],
   },
   {
@@ -276,7 +277,7 @@ function WomenJoggers() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              <div className="sticky top-20 h-screen overflow-scroll no-scrollbar">
+              <div className="fixed top-20 h-screen overflow-scroll no-scrollbar md:fixed lg:sticky xl:sticky">
                 <DesktopFilter
                   filters={filters}
                   filterArray={filterArray}
@@ -306,6 +307,7 @@ function WomenJoggers() {
           </section>
         </main>
       </div>
+      <Footer />
     </div>
   );
 }
