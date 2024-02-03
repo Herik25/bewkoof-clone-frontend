@@ -237,7 +237,7 @@ function AddressForm({ open, setOpen, selectedAddress, addressIndex }) {
                           type="text"
                           name="country"
                           id="country"
-                          placeholder="India"
+                          placeholder="India (selected)"
                           disabled
                           className=" w-full border-[1px] border-[#ccc] rounded-md outline-none pl-10 cursor-not-allowed"
                         />
@@ -339,7 +339,7 @@ function AddressForm({ open, setOpen, selectedAddress, addressIndex }) {
                           })}
                           id="street"
                           placeholder="Flat no/Building, Street name"
-                          className=" w-full border-[1px] border-[#ccc] focus:ring-0 focus:border-black rounded-md outline-none mr-4"
+                          className=" w-full border-[1px] border-[#ccc] focus:ring-0 focus:border-black rounded-md outline-none"
                         />
                       </div>
                       <div className=" flex mt-6">
@@ -350,10 +350,10 @@ function AddressForm({ open, setOpen, selectedAddress, addressIndex }) {
                           })}
                           id="area"
                           placeholder="Area/Locality"
-                          className=" w-full border-[1px] border-[#ccc] focus:ring-0 focus:border-black rounded-md outline-none mr-4"
+                          className=" w-full border-[1px] border-[#ccc] focus:ring-0 focus:border-black rounded-md outline-none"
                         />
                       </div>
-                      <div className=" flex mt-6 mx-24 gap-5">
+                      <div className=" flex mt-6 mx-6 gap-5 sm:mx-12 md:mx-24">
                         <button
                           type="submit"
                           value="submit"

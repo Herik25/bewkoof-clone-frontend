@@ -1169,6 +1169,58 @@
       "id": 2
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "product": {
+        "name": "Women's Baby Lavender Lady Hinata Graphic Printed Oversized T-shirt",
+        "brand": "OFFICIAL NARUTO MERCHANDISE",
+        "discountPrice": 1549,
+        "discount": 48,
+        "price": 799,
+        "imgTag": "OVERSIZED FIT",
+        "rating": "4.4",
+        "gender": "women",
+        "color": "purple",
+        "category": "tshirt",
+        "fit": "oversize",
+        "sleve": "halfsleve",
+        "thumbnail": "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842595-1.jpg",
+        "images": [
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842595-1.jpg",
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842600-2.jpg",
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842605-3.jpg",
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842611-4.jpg",
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842616-5.jpg",
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842621-6.jpg",
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842627-7.jpg",
+          "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842632-8.jpg"
+        ],
+        "tags": [
+          "OVERSIZED FIT",
+          "THICK PREMIUM FABRIC"
+        ],
+        "selectedSizes": [
+          "S",
+          "M",
+          "L",
+          "2XL",
+          "XL",
+          "3XL"
+        ],
+        "bestSeller": true,
+        "id": 1
+      },
+      "user": {
+        "email": "test@test.com",
+        "password": "test@1234",
+        "addresses": [],
+        "role": "user",
+        "id": 2
+      },
+      "quantity": 1,
+      "selectedSize": "S",
+      "id": 1
+    }
+  ],
   "orders": []
 }
