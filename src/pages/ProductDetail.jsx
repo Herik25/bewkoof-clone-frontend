@@ -22,6 +22,21 @@ import { addToCartAsync } from "../features/cart/cartSlice";
 import Protected from "../features/auth/components/Protected";
 import { selectUserInfo } from "../features/user/userSlice";
 import { useForm } from "react-hook-form";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
 
 function ProductDetail() {
   const {
@@ -35,6 +50,7 @@ function ProductDetail() {
   const [img, setImg] = useState("");
   const [selectedSize, setSelectedSize] = useState("S");
   const [pincode, setPincode] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
 
   const param = useParams();
   const dispatch = useDispatch();
@@ -53,7 +69,21 @@ function ProductDetail() {
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(param.id));
-  }, [dispatch]); // removevd bestSellerProducts
+  }, [dispatch, param.id]); // removevd bestSellerProducts
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767); // Adjust the breakpoint as needed
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // check to see mobilescreen
 
   const handleCart = (e) => {
     e.preventDefault();
@@ -94,68 +124,74 @@ function ProductDetail() {
     },
   ];
 
-  const renderedProducts = bestSellerProducts.map((product, index) => {
-    return (
-      <Link
-        to={`/all-products/productdetail/${product.id}`}
-        key={index}
-        className=" bg-white min-w-[236px] mx-2"
-      >
-        <img
-          src={product.thumbnail}
-          alt={product.imageAlt}
-          onDragStart={(e) => e.preventDefault()}
-          className=" h-[300px] cursor-pointer"
-        />
-        <div className=" flex flex-col font-poppins p-1 pt-2">
-          <div className=" flex items-center">
-            <div className=" font-Krala text-lg text-[#333] pr-2">
-              ₹<span className=" font-bold">{product.price}</span>
-            </div>
-            <div className=" line-through text-sm text-[#888] pr-2 font-Krala">
-              ₹<span>{product.discountPrice}</span>
-            </div>
-          </div>
-        </div>
-      </Link>
-    );
-  });
-
   return (
     <div>
       <Navbar />
       {product ? (
-        <div className=" mt-[80px] mx-60">
-          <div className=" h-screen w-full grid grid-cols-[2fr_8fr_8fr]">
+        <div className=" mt-[80px] mx-2 sm:mx-8 md:mx-20 lg:mx-40 xl:mx-60">
+          <div className=" w-full grid grid-cols-1 md:grid-cols-[2fr_8fr_8fr] md:h-screen">
             <div className=" w-[100px] mt-2">
-              <div className=" h-10 w-10 text-gray-400 mx-auto">
-                <ChevronUpIcon />
-              </div>
-              {product.images && (
-                <div className=" flex flex-col overflow-y-auto no-scrollbar max-w-[100px] max-h-[480px]">
-                  {product.images.map((image, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className=" cursor-pointer"
-                        onClick={() => setImg(image)}
+              {isMobile ? (
+                <div className=" w-screen pr-2">
+                  <div className=" w-full">
+                    {product.images && (
+                      <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={10}
+                        slidesPerView={1}
+                        pagination={{ clickable: false }}
+                        scrollbar={{ draggable: true }}
+                        // onSwiper={(swiper) => console.log(swiper)}
+                        // onSlideChange={() => console.log('slide change')}
                       >
-                        <img src={image} className=" p-2" alt="images" />
-                      </div>
-                    );
-                  })}
+                        {product.images.map((image, index) => {
+                          return (
+                            <SwiperSlide key={index}>
+                              <div>
+                                <img
+                                  className=" h-[550px] min-w-full lg:h-[500px] xl:h-[500px]"
+                                  src={image}
+                                />
+                              </div>
+                            </SwiperSlide>
+                          );
+                        })}
+                      </Swiper>
+                    )}
+                  </div>
                 </div>
+              ) : (
+                <>
+                  <div className=" h-10 w-10 text-gray-400 mx-auto">
+                    <ChevronUpIcon />
+                  </div>
+                  {product.images && (
+                    <div className=" flex flex-col overflow-x-auto no-scrollbar max-w-[100px] max-h-[480px]">
+                      {product.images.map((image, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className=" cursor-pointer"
+                            onClick={() => setImg(image)}
+                          >
+                            <img src={image} className=" p-2" alt="images" />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                  <div className=" h-10 w-10 text-gray-400 mx-auto">
+                    <ChevronDownIcon />
+                  </div>
+                </>
               )}
-              <div className=" h-10 w-10 text-gray-400 mx-auto">
-                <ChevronDownIcon />
-              </div>
             </div>
             {product.images && (
-              <div>
+              <div className=" hidden md:block">
                 <img src={img || product.images[0]} alt="big image" />
               </div>
             )}
-            <div className=" flex flex-col mx-6 w-full p-5 overflow-y-auto no-scrollbar">
+            <div className=" flex flex-col mx-0 w-full p-5 no-scrollbar md:overflow-y-auto md:mx-6">
               <div>
                 <span className=" font-Montserrat font-semibold text-[18px] text-[#4f5362]">
                   {product.brand}
@@ -460,16 +496,30 @@ function ProductDetail() {
                                 {product?.desc ? product?.desc : product.name}
                               </span>
                               <span className=" text-xs text-[#606060] opacity-80 font-Montserrat mb-2">
-                                <span className=" font-bold">Country of Origin - </span>India
+                                <span className=" font-bold">
+                                  Country of Origin -{" "}
+                                </span>
+                                India
                               </span>
                               <span className=" text-xs text-[#606060] opacity-80 font-Montserrat mb-2">
-                                <span className=" font-bold">Manufactured By - </span>Bewakoof Brands Pvt Ltd, Sairaj logistic hub #A5,BMC pipeline road, Opposite all saints high school, Amane, Bhiwandi, Thane, Maharashtra 421302
+                                <span className=" font-bold">
+                                  Manufactured By -{" "}
+                                </span>
+                                Bewakoof Brands Pvt Ltd, Sairaj logistic hub
+                                #A5,BMC pipeline road, Opposite all saints high
+                                school, Amane, Bhiwandi, Thane, Maharashtra
+                                421302
                               </span>
                               <span className=" text-xs text-[#606060] opacity-80 font-Montserrat mb-2">
-                                <span className=" font-bold">Packed By - </span>Bewakoof Brands Pvt Ltd, Sairaj logistic hub #A5,BMC pipeline road, Opposite all saints high school, Amane, Bhiwandi, Thane, Maharashtra 421302
+                                <span className=" font-bold">Packed By - </span>
+                                Bewakoof Brands Pvt Ltd, Sairaj logistic hub
+                                #A5,BMC pipeline road, Opposite all saints high
+                                school, Amane, Bhiwandi, Thane, Maharashtra
+                                421302
                               </span>
                               <span className=" text-xs text-[#606060] opacity-80 font-Montserrat mb-2">
-                                <span className=" font-bold">Commodity - </span>{product.category}
+                                <span className=" font-bold">Commodity - </span>
+                                {product.category}
                               </span>
                             </div>
                           </div>
@@ -520,9 +570,87 @@ function ProductDetail() {
             <div className=" text-center font-Montserrat font-bold text-black text-lg">
               <span>Best Sellers</span>
             </div>
-            <div className=" flex bg-white h-[400px] p-5 overflow-x-auto no-scrollbar">
-              {renderedProducts}
-            </div>
+            {isMobile ? (
+              <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={10}
+                slidesPerView={2}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
+              >
+                {bestSellerProducts.map((product, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <Link
+                        to={`/all-products/productdetail/${product.id}`}
+                        key={index}
+                        className=" bg-white min-w-[250px] mx-2"
+                      >
+                        <img
+                          src={product.thumbnail}
+                          alt={product.imageAlt}
+                          onDragStart={(e) => e.preventDefault()}
+                          className=" w-full min-h-[250px] cursor-pointer"
+                        />
+                        <div className=" flex flex-col font-poppins p-1 pt-2">
+                          <div className=" flex items-center">
+                            <div className=" font-Krala text-lg text-[#333] pr-2">
+                              ₹
+                              <span className=" font-bold">
+                                {product.price}
+                              </span>
+                            </div>
+                            <div className=" line-through text-sm text-[#888] pr-2 font-Krala">
+                              ₹<span>{product.discountPrice}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            ) : (
+              <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={10}
+                slidesPerView={4}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
+              >
+                {bestSellerProducts.map((product, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <Link
+                        to={`/all-products/productdetail/${product.id}`}
+                        key={index}
+                        className=" bg-white min-w-[236px] mx-2"
+                      >
+                        <img
+                          src={product.thumbnail}
+                          alt={product.imageAlt}
+                          onDragStart={(e) => e.preventDefault()}
+                          className=" w-full max-h-[300px] cursor-pointer"
+                        />
+                        <div className=" flex flex-col font-poppins p-1 pt-2">
+                          <div className=" flex items-center">
+                            <div className=" font-Krala text-lg text-[#333] pr-2">
+                              ₹
+                              <span className=" font-bold">
+                                {product.price}
+                              </span>
+                            </div>
+                            <div className=" line-through text-sm text-[#888] pr-2 font-Krala">
+                              ₹<span>{product.discountPrice}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            )}
           </div>
         </div>
       ) : (
