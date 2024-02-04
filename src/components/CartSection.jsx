@@ -120,7 +120,6 @@ function CartSection() {
                     Signed as
                   </div>
                   <div className="text-md font-karala font-semibold text-[#333]">
-                    test@test.com
                     {user?.email}
                   </div>
                 </div>
