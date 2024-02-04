@@ -128,7 +128,7 @@ function Checkout() {
       items,
       user: user.id,
       totalPrice,
-      paymentMethod,
+      paymentMethod: "cash",
       status: "pending",
       orderDate: formattedOrderDateDate,
       deliveryDate: formattedDeliveryDate,
@@ -168,7 +168,10 @@ function Checkout() {
         </div>
       ) : (
         <div className="flex mt-1 pb-3 h-12 w-full items-center justify-between p-2 border-b-[1px] border-[#ccc]">
-          <Link to="/" className=" flex items-center md:mx-12 lg:mx-36 xl:mx-52 ">
+          <Link
+            to="/"
+            className=" flex items-center md:mx-12 lg:mx-36 xl:mx-52 "
+          >
             <img src="/logo.png" className="h-10 w-10 p-1" alt="Logo" />
             <div className="font-BungeeSpice text-2xl mt-0 pl-2 translate-y-[1px] lg:text-4xl">
               SYN
@@ -228,7 +231,8 @@ function Checkout() {
                 ) : (
                   <div className="flex flex-col items-start">
                     <div className=" text-xs text-[#292d35] font-Montserrat mb-2">
-                      {user?.addresses[0]?.name}
+                      {user?.addresses[0]?.street}, {user?.addresses[0]?.city},{" "}
+                      {user?.addresses[0]?.state}, {user?.addresses[0]?.pincode}
                     </div>
                     <div className=" text-xs text-[#292d35] font-Montserrat mb-2"></div>
                   </div>
@@ -284,7 +288,7 @@ function Checkout() {
                         <div className=" text-sm text-[#444] max-w-full whitespace-nowrap overflow-hidden text-ellipsis pb-[2px] mb-[1px]">
                           {item.product.brand}
                         </div>
-                        <div className=" text-sm text-[#444] max-w-full whitespace-nowrap overflow-hidden text-ellipsis pb-[2px] mb-[1px]">
+                        <div className=" text-sm text-[#444] max-w-[85%] whitespace-nowrap overflow-hidden text-ellipsis pb-[2px] mb-[1px]">
                           {item.product.name}
                         </div>
                         <div className=" text-[#737373] text-xs mb-[2px]">
@@ -319,11 +323,11 @@ function Checkout() {
               <span className=" font-Montserrat font-bold text-base">
                 Debit & Credit Card
               </span>
-              <div
-                onClick={() => setPaymentSection(!paymetnSection)}
-                className=" px-2 border-[1px] border-[#ddd] rounded-md my-6"
-              >
-                <button className="flex w-full items-center justify-between bg-white px-2 py-3 font-Montserrat hover:text-gray-700 ">
+              <div className=" px-2 border-[1px] border-[#ddd] rounded-md my-6">
+                <div
+                  onClick={() => setPaymentSection(!paymetnSection)}
+                  className="flex w-full items-center justify-between bg-white px-2 py-3 font-Montserrat hover:text-gray-700 "
+                >
                   <div className="flex items-center">
                     <div className="flex items-center ">
                       <span className=" border-[1px] border-[#ddd] rounded-full">
@@ -348,10 +352,10 @@ function Checkout() {
                       />
                     )}
                   </span>
-                </button>
+                </div>
 
                 {paymetnSection && (
-                  <div className={`Stripe ${isMobile ? 'w-[87%]' : 'w-[30%]'}`}>
+                  <div className={`Stripe ${isMobile ? "w-[90%]" : "w-[30%]"}`}>
                     {clientSecret && (
                       <Elements options={options} stripe={stripePromise}>
                         <CheckoutForm
@@ -370,11 +374,11 @@ function Checkout() {
               <span className=" font-Montserrat font-bold text-base">
                 Other Payment Methods
               </span>
-              <div
-                onClick={() => setCashSetion(!cashSection)}
-                className=" px-2 border-[1px] border-[#ddd] rounded-md my-6"
-              >
-                <button className="flex w-full items-center justify-between bg-white px-2 py-3 font-Montserrat hover:text-gray-700 ">
+              <div className=" px-2 border-[1px] border-[#ddd] rounded-md my-6">
+                <div
+                  onClick={() => setCashSetion(!cashSection)}
+                  className="flex w-full items-center justify-between bg-white px-2 py-3 font-Montserrat hover:text-gray-700 "
+                >
                   <div className="flex items-center">
                     <div className="flex items-center ">
                       <span>
@@ -401,7 +405,7 @@ function Checkout() {
                       />
                     )}
                   </span>
-                </button>
+                </div>
 
                 {cashSection && (
                   <form className=" flex flex-col w-full p-4">
@@ -411,7 +415,7 @@ function Checkout() {
                     <button
                       type="submit"
                       value="submit"
-                      onClick={handleOrder}
+                      onClick={() => handleOrder()}
                       className=" w-full text-white font-Montserrat text-base font-bold rounded-md p-x3 py-2 bg-[#42a2a2]"
                     >
                       Pay <span className=" font-Krala">₹</span>

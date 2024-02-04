@@ -236,23 +236,23 @@ function ProductDetail() {
               </div>
               {product.tags && (
                 <div>
-                  <div className=" flex items-start">
+                  <div className=" flex items-start flex-wrap">
                     {product.tags.map((tag, index) => {
                       return (
                         <div key={index} className=" whitespace-nowrap">
                           {tag === "OVERSIZED FIT" && (
-                            <div className=" px-2 py-[2px] bg-[#525252] font-bold text-white text-xs font-Montserrat opacity-80 mr-2">
+                            <div className=" px-2 py-[2px] my-1 bg-[#525252] font-bold text-white text-xs font-Montserrat opacity-80 mr-2 md:my-0">
                               {tag}
                             </div>
                           )}
                           {tag.startsWith("BUY") && (
-                            <div className=" mr-2 px-2 py-[2px] bg-green-500 font-bold text-white text-xs font-Montserrat opacity-80">
+                            <div className=" mr-2 px-2 py-[2px] my-1 bg-green-500 font-bold text-white text-xs font-Montserrat opacity-80 md:my-0">
                               {tag}
                             </div>
                           )}
                           {tag !== "OVERSIZED FIT" &&
                             tag.startsWith("BUY") === false && (
-                              <div className=" mr-2 px-2 py-[2px] bg-white border-[1px]  border-black font-bold text-black text-xs font-Montserrat opacity-80">
+                              <div className=" mr-2 px-2 py-[2px] my-1 bg-white border-[1px]  border-black font-bold text-black text-xs font-Montserrat opacity-80 md:my-0">
                                 {tag}
                               </div>
                             )}
