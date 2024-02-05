@@ -6,7 +6,7 @@ function PrivacyPolicy() {
   return (
     <div className=" font-Montserrat">
       <Navbar />
-      <div className="container mx-40 mt-16">
+      <div className="container mt-16 mx-4 md:mx-8 lg:mx-32 xl:mx-48">
         <div className="">
           <h3 className=" text-center text-3xl font-bold  mt-24 mb-4">
             Privacy Policy
