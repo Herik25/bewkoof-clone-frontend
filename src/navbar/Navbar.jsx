@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsBag } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -11,10 +11,51 @@ import { selectUserInfo } from "../features/user/userSlice";
 function Navbar() {
   const [menu, setMenu] = useState("");
   const [userBox, setUserBox] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // const user = useSelector(selectLoggedInUser);
-  const user = useSelector(selectUserInfo);
+  // const user = useSelector(selectUserInfo);
+  const user =  {
+    "email": "test@test.com",
+    "password": "test@1234",
+    "role": "admin",
+    "addresses": [
+      {
+        "name": "harsh parmar ",
+        "mobileNumber": "8799026842",
+        "pincode": "360370",
+        "city": "Jetpur",
+        "state": "Gujarat",
+        "street": "junagadh road",
+        "area": "axar park"
+      }
+    ],
+    "id": 1,
+    "selectedAddress": {
+      "name": "harsh parmar ",
+      "mobileNumber": "8799026842",
+      "pincode": "360370",
+      "city": "Jetpur",
+      "state": "Gujarat",
+      "street": "junagadh road",
+      "area": "axar park"
+    }
+  }
   const items = useSelector(selectItems);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767); // Adjust the breakpoint as needed
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // check to see mobilescreen
 
   return (
     <div className="fixed top-0 z-50 w-full bg-white border-b-[1px] border-gray-400">
@@ -129,7 +170,7 @@ function Navbar() {
                       {user.role === "admin" && (
                         <Link
                           to="/admin"
-                          className=" hover:bg-[#f5f5f5] py-4 px-5 w-full cursor-pointer"
+                          className={`${isMobile ? 'hidden' : 'block'} hover:bg-[#f5f5f5] py-4 px-5 w-full cursor-pointer`}
                         >
                           Admin
                         </Link>
