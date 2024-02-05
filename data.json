@@ -1222,5 +1222,137 @@
       "id": 1
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": "65be0a8d694f30fd022ebe73",
+      "items": [
+        {
+          "product": {
+            "deleted": false,
+            "name": "Women's Baby Lavender Lady Hinata Graphic Printed Oversized T-shirt",
+            "brand": "OFFICIAL NARUTO MERCHANDISE",
+            "discountPrice": 1549,
+            "discount": 48,
+            "price": 799,
+            "imgTag": "OVERSIZED FIT",
+            "rating": 4.4,
+            "gender": "women",
+            "color": "purple",
+            "category": "tshirt",
+            "fit": "oversize",
+            "sleve": "halfsleve",
+            "thumbnail": "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842595-1.jpg",
+            "images": [
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842595-1.jpg",
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842600-2.jpg",
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842605-3.jpg",
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842611-4.jpg",
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842616-5.jpg",
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842621-6.jpg",
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842627-7.jpg",
+              "https://images.bewakoof.com/t1080/women-s-baby-lavender-lady-hinata-graphic-printed-oversized-t-shirt-620622-1700842632-8.jpg"
+            ],
+            "tags": [
+              "OVERSIZED FIT",
+              "THICK PREMIUM FABRIC"
+            ],
+            "selectedSizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "2XL"
+            ],
+            "bestSeller": true,
+            "id": 1,
+            "bestseller": false,
+            "desc": "Dive into the anime-inspired fashion realm with our Lady Hinata Women's Baby Lavender Graphic Printed Oversized T-shirt. The \"Lady Hinata\" t-shirt exemplifies our commitment to distinctive, high-quality prints that resonate with fans of the series."
+          },
+          "user": {},
+          "quantity": 1,
+          "selectedSize": "S",
+          "id": "65bdec6eb4b442563330aaef"
+        },
+        {
+          "product": {
+            "deleted": false,
+            "name": "Men's Black Hunter X Hunter Graphic Printed Oversized T-shirt",
+            "brand": "Bewakoof®",
+            "discountPrice": 14949,
+            "discount": 60,
+            "price": 599,
+            "imgTag": "OVERSIZED FIT",
+            "rating": "4.3",
+            "gender": "men",
+            "color": "black",
+            "category": "tshirt",
+            "fit": "oversize",
+            "sleve": "halfsleve",
+            "thumbnail": "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766507-1.jpg",
+            "images": [
+              "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766507-1.jpg",
+              "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766513-2.jpg",
+              "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766518-3.jpg",
+              "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766524-4.jpg",
+              "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766529-5.jpg",
+              "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766535-6.jpg",
+              "https://images.bewakoof.com/t1080/men-s-black-hunter-x-hunter-graphic-printed-oversized-t-shirt-591079-1694766540-7.jpg"
+            ],
+            "tags": [
+              "OVERSIZED FIT",
+              "100% COTTON"
+            ],
+            "selectedSizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "2XL",
+              "3XL"
+            ],
+            "bestSeller": false,
+            "id": "658e72df6827f718bf9f3a8b",
+            "bestseller": false,
+            "desc": "From Gon to Killua- experience the thrill of the hunt with your faves while wearing this Hunter X Hunter Men's Oversized T-Shirt. Club this black t-shirt with contrasting shorts and sneakers for a dapper appeal."
+          },
+          "user": "65ad4123399d7de070b73110",
+          "quantity": 1,
+          "selectedSize": "S",
+          "id": 1
+        }
+      ],
+      "user": {
+        "email": "test@test.com",
+        "password": "test@1234",
+        "role": "admin",
+        "addresses": [
+          {
+            "name": "harsh parmar ",
+            "mobileNumber": "8799026842",
+            "pincode": "360370",
+            "city": "Jetpur",
+            "state": "Gujarat",
+            "street": "junagadh road",
+            "area": "axar park"
+          }
+        ],
+        "id": 1,
+        "selectedAddress": {
+          "name": "harsh parmar ",
+          "mobileNumber": "8799026842",
+          "pincode": "360370",
+          "city": "Jetpur",
+          "state": "Gujarat",
+          "street": "junagadh road",
+          "area": "axar park"
+        }
+      },
+      "totalPrice": 1398 ,
+      "paymentMethod": "card",
+      "status": "pending",
+      "orderDate": "3 February 2024",
+      "deliveryDate": "10 February 2024",
+      "__v": 0
+    }
+  ]
 }
