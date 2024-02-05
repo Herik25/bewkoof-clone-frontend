@@ -8,7 +8,34 @@ import { selectUserInfo } from "../features/user/userSlice";
 function MyProfile() {
   const dispatch = useDispatch();
 
-  const user = useSelector(selectUserInfo);
+  // const user = useSelector(selectUserInfo);
+  const user = {
+    "email": "test@test.com",
+    "password": "test@1234",
+    "role": "admin",
+    "addresses": [
+      {
+        "name": "harsh parmar ",
+        "mobileNumber": "8799026842",
+        "pincode": "360370",
+        "city": "Jetpur",
+        "state": "Gujarat",
+        "street": "junagadh road",
+        "area": "axar park"
+      }
+    ],
+    "id": 1,
+    "selectedAddress": {
+      "name": "harsh parmar ",
+      "mobileNumber": "8799026842",
+      "pincode": "360370",
+      "city": "Jetpur",
+      "state": "Gujarat",
+      "street": "junagadh road",
+      "area": "axar park"
+    }
+  }
+  
   const {
     register,
     handleSubmit,
@@ -19,13 +46,13 @@ function MyProfile() {
   return (
     <div className=" font-Montserrat">
       <Navbar />
-      <div className=" mx-44 mb-6">
+      <div className=" mx-2 md:mx-8 lg:mx-32 xl:mx-48 mb-6">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 pb-2 mt-24">
           My Profile
         </h1>
         <div className="h-[2px] w-[100px] bg-yellow-400"></div>
       </div>
-      <div className=" mx-44 max-w-[500px]">
+      <div className=" mx-2 md:mx-8 lg:mx-32 xl:mx-48 max-w-[500px]">
         <form
           className=" flex flex-col w-full"
           onSubmit={handleSubmit((data) => {
@@ -42,7 +69,7 @@ function MyProfile() {
               })}
               id="email"
               placeholder={user.email}
-              className=" w-full text-sm border-b-[1px] p-0 border-t-0 border-r-0 border-l-0 border-b-[#ccc] focus:ring-0 focus:border-black outline-none "
+              className=" w-[50%] text-sm border-b-[1px] p-0 border-t-0 border-r-0 border-l-0 border-b-[#ccc] focus:ring-0 focus:border-black outline-none "
             />
           </div>
           <div className=" relative px-2">
