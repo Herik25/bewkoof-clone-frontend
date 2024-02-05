@@ -460,7 +460,7 @@ function Checkout() {
               </div>
             </div>
             <div className=" translate-y-[-14px] text-center">
-              <span className=" font-Montserrat text-xs text-[#8f98a9] bg-white px-2">
+              <span className=" font-Montserrat text-xs text-[#8f98a9] bg-[#f7f7f7] px-2">
                 We accept
               </span>
             </div>
