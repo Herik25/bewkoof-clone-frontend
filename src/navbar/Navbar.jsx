@@ -6,41 +6,18 @@ import { selectLoggedInUser } from "../features/auth/authSlice";
 import { AiOutlineUser } from "react-icons/ai";
 import { selectItems } from "../features/cart/cartSlice";
 import { selectUserInfo } from "../features/user/userSlice";
+import { FiMenu } from "react-icons/fi";
+import MobileMenu from "../components/MobileMenu";
 // import { setGender } from "../features/products/ProductSlice";
 
 function Navbar() {
   const [menu, setMenu] = useState("");
   const [userBox, setUserBox] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [open, setOpen] = useState(false);
 
   // const user = useSelector(selectLoggedInUser);
-  // const user = useSelector(selectUserInfo);
-  const user =  {
-    "email": "test@test.com",
-    "password": "test@1234",
-    "role": "admin",
-    "addresses": [
-      {
-        "name": "harsh parmar ",
-        "mobileNumber": "8799026842",
-        "pincode": "360370",
-        "city": "Jetpur",
-        "state": "Gujarat",
-        "street": "junagadh road",
-        "area": "axar park"
-      }
-    ],
-    "id": 1,
-    "selectedAddress": {
-      "name": "harsh parmar ",
-      "mobileNumber": "8799026842",
-      "pincode": "360370",
-      "city": "Jetpur",
-      "state": "Gujarat",
-      "street": "junagadh road",
-      "area": "axar park"
-    }
-  }
+  const user = useSelector(selectUserInfo);
   const items = useSelector(selectItems);
 
   useEffect(() => {
@@ -59,6 +36,7 @@ function Navbar() {
 
   return (
     <div className="fixed top-0 z-50 w-full bg-white border-b-[1px] border-gray-400">
+      { isMobile && <MobileMenu open={open} setOpen={setOpen} user={user} />}
       <div className="flex mt-1 pb-3 h-[55px] w-full items-center justify-between p-2 md:justify-around lg:justify-around">
         <div className="flex items-center">
           <Link to='/' className=" flex items-center">
@@ -202,13 +180,18 @@ function Navbar() {
                 )}
               </li>
             </Link>
-            <li className=" pl-3">
+            <li className=" hidden md:block pl-3">
               <div>
                 <img
                   className="h-[35px] w-[35px] rounded-[50%]"
                   src="https://th.bing.com/th/id/R.607b9f69862d76af04b474113c0c7ff5?rik=lfnOsbv7mhDNbQ&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2fb%2fbc%2fFlag_of_India.png&ehk=Pk5lH0C%2fhstFahWfb15vLjtrJb3DslIU4%2fAQneo9IIM%3d&risl=&pid=ImgRaw&r=0"
                   alt="User avatar"
                 />
+              </div>
+            </li>
+            <li className=" pl-2">
+              <div onClick={() => setOpen(true)}>
+                <FiMenu className=" h-6 w-6" />
               </div>
             </li>
           </ul>

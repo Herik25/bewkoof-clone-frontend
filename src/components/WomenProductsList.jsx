@@ -202,9 +202,9 @@ export default function WomenProductList() {
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between pb-6 pt-20">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-gray-900 pb-2">
+              <h1 className="text-sm sm:text-2xl font-bold tracking-tight text-gray-900 pb-2">
                 Women's Clothing{" "}
-                <span className=" ml-1 text-2xl text-[#949494] font-Montserrat font-medium">
+                <span className=" ml-1 text-sm sm:text-2xl text-[#949494] font-Montserrat font-medium">
                   ({totalCount})
                 </span>
               </h1>
@@ -214,7 +214,7 @@ export default function WomenProductList() {
             <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="group inline-flex justify-center text-xs font-bold text-[#2d2d2d] hover:text-gray-900">
+                  <Menu.Button className="group inline-flex justify-center text-[11px] sm:text-xs font-bold text-[#2d2d2d] hover:text-gray-900">
                     <span className=" font-bold opacity-50">
                       SORT BY &nbsp;
                     </span>{" "}
