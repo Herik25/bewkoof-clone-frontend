@@ -140,19 +140,19 @@ export default function MobileMenu({ open, setOpen, user }) {
                   </Link>
                 </div>
               </div>
-              {user ? (
-                <Link
-                  to="/logout"
-                  className="fixed bottom-0 w-full bg-white py-4 px-4 font-Montserrat font-bold text-sm"
-                >
-                  LOG OUT
-                </Link>
-              ) : (
+              {user === null || user.message === "Unauthorized" ? (
                 <Link
                   to="/login"
                   className="fixed bottom-0 w-full bg-white py-4 px-4 font-Montserrat font-bold text-sm"
                 >
                   LOG IN
+                </Link>
+              ) : (
+                <Link
+                  to="/logout"
+                  className="fixed bottom-0 w-full bg-white py-4 px-4 font-Montserrat font-bold text-sm"
+                >
+                  LOG OUT
                 </Link>
               )}
             </div>
