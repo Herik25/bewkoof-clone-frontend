@@ -6,24 +6,24 @@ function AboutUs() {
   return (
     <div className=" font-Montserrat">
       <Navbar />
-      <div className=" mx-52 mb-20">
+      <div className=" mx-2 md:mx-8 lg:mx-32 xl:mx-48 mb-20">
         <h1 className="text-5xl opacity-80 font-bold tracking-tight text-gray-900 pb-2 mt-24">
           Our Story
         </h1>
         <div className="h-[2px] w-[100px] bg-yellow-400 my-1"></div>
       </div>
-      <div className=" mx-52">
-        <div className=" flex mb-52">
+      <div className=" mx-2 md:mx-8 lg:mx-32 xl:mx-48">
+        <div className=" flex flex-col md:flex-row mb-52">
           <img
             src="https://images.bewakoof.com/uploads/campaign/our-story-1501569294.png"
             alt="aboutdoddle"
           />
-          <div className=" flex flex-col ml-40">
+          <div className=" flex flex-col mt-6 ml-4 md:mt-0 md:ml-44 w-screen">
             <span className=" text-2xl">
               Our story starts with the name
               <br />{" "}
               <b className=" relative font-Montserrat">
-              Bewakoof
+                Bewakoof
                 <sup className=" absolute text-[10px] translate-y-[13px] translate-x-[2px]">
                   ®
                 </sup>{" "}
@@ -44,7 +44,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <div className=" bg-black h-[550px] flex items-center justify-center">
+      <div className=" w-[110%] bg-black h-[550px] flex items-center justify-center md:w-full">
         <div className=" text-white text-5xl text-center max-w-5xl font-serif">
           Making an impact through{" "}
           <b className=" font-Montserrat">innovation</b>,{" "}
@@ -52,7 +52,7 @@ function AboutUs() {
           <b className=" font-Montserrat">thoughtfulness</b>
         </div>
       </div>
-      <div className=" mx-52">
+      <div className=" mx-2 md:mx-8 lg:mx-32 xl:mx-48">
         <div className=" flex flex-col items-center mt-20 mb-36">
           <div className=" flex flex-col">
             <span className=" text-2xl">
@@ -90,9 +90,9 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <div>
+      <div className=" w-[110%] md:w-full">
         <img
-          className=" w-full"
+          className=" w-full min-h-[250px]"
           src="https://images.bewakoof.com/uploads/campaign/our-story-innovation-1501593008.png?tr=q-90"
           alt="image"
         />
@@ -128,50 +128,85 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="bg-[#fafafa]">
-        <div className=" mx-52">
+      <div className="bg-[#fafafa] w-[110%] md:w-full">
+        <div className=" mx-2 md:mx-8 lg:mx-32 xl:mx-48">
           <div className="grid grid-cols-4 py-28 text-center">
             <div className=" flex flex-col">
-              <div className=" font-Montserrat text-5xl font-bold">7 years</div>
-              <div className=" font-serif text-2xl mt-2">of journey so far</div>
+              <div className=" font-Montserrat text-xl sm:2xl: md:3xl lg:text-4xl xl:text5xl font-bold">
+                7 years
+              </div>
+              <div className=" font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2">
+                of journey so far
+              </div>
             </div>
             <div className=" flex flex-col">
-              <div className=" font-Montserrat text-5xl font-bold">250+</div>
-              <div className=" font-serif text-2xl mt-2">team-members</div>
+              <div className=" font-Montserrat text-xl sm:2xl: md:3xl lg:text-4xl xl:text5xl font-bold">
+                250+
+              </div>
+              <div className=" font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2">
+                team-members
+              </div>
             </div>
             <div className=" flex flex-col">
-              <div className=" font-Montserrat text-5xl font-bold">1 Crore+</div>
-              <div className=" font-serif text-2xl mt-2">products sold!</div>
+              <div className=" font-Montserrat text-xl sm:2xl: md:3xl lg:text-4xl xl:text5xl font-bold">
+                1 Crore+
+              </div>
+              <div className=" font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2">
+                products sold!
+              </div>
             </div>
             <div className=" flex flex-col">
-              <div className=" font-Montserrat text-5xl font-bold">60 Lakh+</div>
-              <div className=" font-serif text-2xl mt-2">app downloads</div>
+              <div className=" font-Montserrat text-xl sm:2xl: md:3xl lg:text-4xl xl:text5xl font-bold">
+                60 Lakh+
+              </div>
+              <div className=" font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2">
+                app downloads
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#fdd634]">
-        <div className=" mx-52 pt-28 pb-10">
+      <div className="bg-[#fdd634] w-[110%] md:w-full">
+        <div className="mx-2 md:mx-8 lg:mx-32 xl:mx-48 pt-28 pb-10">
           <div className=" text-5xl font-serif text-center">
-            <span>What makes us <span className=" font-Montserrat">Bewakoof <sup>®</sup></span></span>
+            <span>
+              What makes us{" "}
+              <span className=" font-Montserrat">
+                Bewakoof <sup>®</sup>
+              </span>
+            </span>
           </div>
-          <div className="grid grid-cols-3 gap-7 py-28 text-center">
+          <div className="grid grid-cols-3 gap-1 md:7 py-28 text-center">
             <div className=" flex flex-col">
-              <div className=" font-Montserrat text-2xl font-bold">Innovative design</div>
-              <div className=" font-serif text-2xl mt-6">Creating designs that are an extension of you.</div>
+              <div className=" font-Montserrat text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold">
+                Innovative design
+              </div>
+              <div className=" font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-6">
+                Creating designs that are an extension of you.
+              </div>
             </div>
             <div className=" flex flex-col">
-              <div className=" font-Montserrat text-2xl font-bold">Direct to consumer model</div>
-              <div className=" font-serif text-2xl mt-6">Bringing accessibility and value to everyday fashion.</div>
+              <div className=" font-Montserrat text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold">
+                Direct to consumer model
+              </div>
+              <div className=" font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-6">
+                Bringing accessibility and value to everyday fashion.
+              </div>
             </div>
             <div className=" flex flex-col">
-              <div className=" font-Montserrat text-2xl font-bold">Homegrown</div>
-              <div className=" font-serif text-2xl mt-6">Imagined in India, Made in India.</div>
+              <div className=" font-Montserrat text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold">
+                Homegrown
+              </div>
+              <div className=" font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-6">
+                Imagined in India, Made in India.
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="w-[110%] md:w-full">
+        <Footer />
+      </div>
     </div>
   );
 }
