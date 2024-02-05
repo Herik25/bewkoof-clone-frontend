@@ -189,7 +189,7 @@ function Navbar() {
                 />
               </div>
             </li>
-            <li className=" pl-2">
+            <li className=" pl-2 block md:hidden">
               <div onClick={() => setOpen(true)}>
                 <FiMenu className=" h-6 w-6" />
               </div>
