@@ -20,7 +20,7 @@ import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
 import OrderSuccess from "./pages/OrderSuccess";
 import MyOrders from "./pages/MyOrders";
 import MyAccount from "./pages/MyAccount";
-import MyProfile from "./components/MyProfile";
+import MyProfile from "./pages/MyProfile";
 import { fetchLoggedInUserAsync } from "./features/user/userSlice";
 import MenProducts from "./pages/MenProducts";
 import WomenProducts from "./pages/WomenProducts";
