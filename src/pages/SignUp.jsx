@@ -20,10 +20,10 @@ function SignUp() {
 
   return (
     <>
-      {user && <Navigate to="/" replace={true} />}
+      {user && (window.location = "/login")}
       <Navbar />
       <div className="flex flex-col md:flex-row h-screen overflow-hidden">
-      <div className=" hidden flex-col items-center justify-between mt-[60px] bg-gradient-to-t p-6 from-yellow-100 from-10% to-white to-90% md:flex">
+        <div className=" hidden flex-col items-center justify-between mt-[60px] bg-gradient-to-t p-6 from-yellow-100 from-10% to-white to-90% md:flex">
           <div>
             <h1 className=" font-Montserrat font-extrabold text-[30px] m-5">
               Welcome to the world of Super Sayan

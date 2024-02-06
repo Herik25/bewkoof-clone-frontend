@@ -415,7 +415,7 @@ function Checkout() {
                     <button
                       type="submit"
                       value="submit"
-                      onClick={() => handleOrder()}
+                      onClick={handleOrder}
                       className=" w-full text-white font-Montserrat text-base font-bold rounded-md p-x3 py-2 bg-[#42a2a2]"
                     >
                       Pay <span className=" font-Krala">₹</span>

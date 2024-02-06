@@ -3,11 +3,19 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUserInfo } from "../features/user/userSlice";
+import {
+  resetPasswordRequestAsync,
+  selectMailSent,
+  selectMailStatus,
+} from "../features/auth/authSlice";
 
 function ForgotPassword({ forgotPass, setForgotPass }) {
   const dispatch = useDispatch();
 
   const user = useSelector(selectUserInfo);
+  const mailSent = useSelector(selectMailSent);
+  const mailStatus = useSelector(selectMailStatus);
+
   const {
     register,
     handleSubmit,
@@ -46,7 +54,7 @@ function ForgotPassword({ forgotPass, setForgotPass }) {
                 </div>
                 <form
                   onSubmit={handleSubmit((data) => {
-                    // dispatch()
+                    dispatch(resetPasswordRequestAsync(data.email));
                     // console.log(data);
                   })}
                   className=" mt-12 "
@@ -69,10 +77,21 @@ function ForgotPassword({ forgotPass, setForgotPass }) {
                       {errors.email.message}
                     </p>
                   )}
+                  {mailSent && (
+                    <p className=" text-green-500 text-xs mt-1 ml-2 text-left">
+                      Mail sent
+                    </p>
+                  )}
                   <button className=" w-full my-3">
-                    <div className=" w-full text-white font-Montserrat text-xl font-bold rounded-md py-3 bg-[#42a2a2]">
-                      Submit
-                    </div>
+                    {mailStatus === "loading" ? (
+                      <div className=" w-full text-white font-Montserrat text-xl font-bold rounded-md py-3 bg-[#42a2a2]">
+                        <div className=" mx-auto border-4 rounded-full border-l-transparent w-[36px] h-[36px] border-white animate-spin"></div>
+                      </div>
+                    ) : (
+                      <div className=" w-full text-white font-Montserrat text-xl font-bold rounded-md py-3 bg-[#42a2a2]">
+                        Submit
+                      </div>
+                    )}
                   </button>
                 </form>
               </div>

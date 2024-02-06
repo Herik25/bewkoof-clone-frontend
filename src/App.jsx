@@ -42,6 +42,7 @@ import WomenTshirtsPage from "./pages/CategoriesPages/WomenTshirtsPage";
 import WomenTopsPage from "./pages/CategoriesPages/WomenTopsPage";
 import WomenJoggersPage from "./pages/CategoriesPages/WomenJoggersPage";
 import WomenDressesPage from "./pages/CategoriesPages/WomenDressesPage";
+import ResetPassword from "./pages/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
   },
   {
     path: "/all-products/productdetail/:id",
