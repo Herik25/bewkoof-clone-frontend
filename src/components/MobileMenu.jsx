@@ -8,22 +8,18 @@ export default function MobileMenu({ open, setOpen, user }) {
       <div className="fixed inset-0 bg-gray-500 bg-opacity-75 z-50">
         <div className="fixed inset-y-0 right-0 flex max-w-full pl-10">
           <div className="pointer-events-auto relative w-screen max-w-[250px]">
-            <div className="absolute right-0 top-2 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
-              <button
-                type="button"
-                className="relative rounded-md text-[#000] hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                onClick={() => setOpen(false)}
-              >
-                <span className="absolute -inset-2.5" />
-                <span className="sr-only">Close panel</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
             <div className="flex h-full flex-col overflow-y-scroll bg-[#f7f7f7] py-6 shadow-xl">
-              <div className="px-4 pb-4 sm:px-6 border-b-[#ccc] border-b-[1px]">
+              <div className=" flex justify-between px-4 pb-4 sm:px-6 border-b-[#ccc] border-b-[1px]">
                 <div className="text-base font-semibold leading-6 text-gray-900">
                   Hello, Shopper
                 </div>
+                <button
+                type="button"
+                className=" rounded-md text-[#000] hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                onClick={() => setOpen(false)}
+              >
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
               </div>
               <div className="relative my-3 flex-1 sm:px-6">
                 <div className=" text-[#adabab] px-4 mb-3 text-xs font-bold">
@@ -71,9 +67,9 @@ export default function MobileMenu({ open, setOpen, user }) {
                   </Link>
                 </div>
               </div>
-              <div className=" h-screen">
+              <div className=" h-screen mb-8">
                 <div className=" text-[#adabab] px-4 my-2 text-xs font-bold">
-                  My Profile
+                  User Profile
                 </div>
                 <div className="flex flex-col text-xs font-bold px-4">
                   <Link
