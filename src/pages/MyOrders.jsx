@@ -84,9 +84,9 @@ function MyOrders() {
                           </div>
                           <div className=" flex w-full ml-5 justify-between mt-2 translate-x-[-20px] text-sm text-[#737373]">
                             <div className=" flex flex-col"><span>Order Placed:</span> <span>{order.orderDate}</span></div>
-                            <div className=" flex items-center bg-[#51cccc] py-2 pr-1 rounded-full font-bold">
+                            <div className=" flex items-center justify-between bg-[#51cccc] p-2 rounded-full font-bold">
                               <LiaCrosshairsSolid className=" text-[white] text-lg" />
-                              <span className=" text-white font-bold ml-2">
+                              <span className=" text-white font-bold ml-1">
                                 Track Order
                               </span>
                             </div>
@@ -130,7 +130,7 @@ function MyOrders() {
                                   </div>
                                 </div>
                               </div>
-                              <div className=" flex w-full justify-between mt-4">
+                              <div className=" flex w-full justify-between mt-4 px-4">
                                 <div className=" flex flex-col justify-center text-center">
                                   <div className=" text-[#737373]">status</div>
                                   <div className=" text-green-500 font-bold">
@@ -141,7 +141,7 @@ function MyOrders() {
                                   <div className=" text-sm text-[#737373]">
                                     Delivery Expected by
                                   </div>
-                                  <div className=" text-green-500 font-bold text-xl font-poppins">
+                                  <div className=" text-green-500 font-bold text-lg font-poppins">
                                     {order.deliveryDate}
                                   </div>
                                 </div>
@@ -163,7 +163,7 @@ function MyOrders() {
                             </div>
                           </div>
                           <div className=" text-[#444] mr-2 font-black font-Krala text-xl">
-                            <span className=" font-Montserrat text-base">
+                            <span className=" font-Montserrat text-sm">
                               Total :
                             </span>{" "}
                             <span className="text-base">₹</span>
