@@ -63,26 +63,26 @@ function BestSeller() {
       <h1 className="font-Krala font-bold text-center text-lg sm:text-xl md:text-2xl lg:text-3xl py-3 sm:py-5">
         OUR BEST PICKS
       </h1>
-      <div className=" flex flex-col w-full sm:flex-col md:flex-row lg:flex-row xl:flex-row">
+      <div className=" grid grid-cols-1 md:gap-1 w-full md:grid-cols-2">
         <img
-          className=" w-full p-1 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2 md:pb-0 lg:pb-0 xl:pb-0"
-          src="https://images.bewakoof.com/uploads/grid/app/sale-midsize-desktop-banner-buy-3-at-999-1698766262.jpg"
+          className=" w-full  mb-1 rounded-2xl px-2 md:rounded-none md:px-0"
+          src="https://images.bewakoof.com/uploads/grid/app/Bestsellers-Common-Desktop-midsize-Banner--1--1706852855.jpg"
           onClick={() => naviagate('/all-products')}
         />
         <img
-          className=" w-full p-1 pl-0 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2 md:pb-0 lg:pb-0 xl:pb-0"
-          src="https://images.bewakoof.com/uploads/grid/app/desktop-mid-size-banner-air-1692257835.jpg"
-          onClick={() => naviagate('/all-products')}
+          className=" w-full mb-1 rounded-2xl px-2 md:rounded-none md:px-0"
+          src="https://images.bewakoof.com/uploads/grid/app/boyfriend-t-shirt-midsize-Desktop-banner-1707041553.jpg"
+          onClick={() => naviagate('/women-tshirts')}
         />
       </div>
-      <div className=" flex flex-col w-full sm:flex-col md:flex-row lg:flex-row xl:flex-row">
+      <div className=" grid grid-cols-1 md:gap-1 w-full md:grid-cols-2">
         <img
-          className=" w-full p-1 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2"
-          src="https://images.bewakoof.com/uploads/grid/app/sale-midsize-desktop-banner-B1G1-FREE-1698766263.jpg"
+          className=" w-full mb-1 rounded-2xl px-2 md:rounded-none md:px-0"
+          src="https://images.bewakoof.com/uploads/grid/app/720x420-Midsize-bannner-Combos--1--1704012294.jpg"
           onClick={() => naviagate('/all-products')}
         />
         <img
-          className=" w-full p-1 pl-0 sm:w-full md:w-1/2 lg:w-1/2 xl:h-1/2"
+          className=" w-full  mb-1 rounded-2xl px-2 md:rounded-none md:px-0"
           src="https://images.bewakoof.com/uploads/grid/app/mid-size-hygiene-revamp-customise-model-desktop-new-1689142924.jpg"
           onClick={() => naviagate('/all-products')}
         />

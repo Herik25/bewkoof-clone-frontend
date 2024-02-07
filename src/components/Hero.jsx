@@ -43,11 +43,10 @@ function Header() {
       // onSwiper={(swiper) => console.log(swiper)}
       // onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/MadDiwali-Sale-1x1-Day01-Common-1698763265.jpg' /></Link></SwiperSlide>
-      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/SweatersFlatknits-1x1-sweaters-common-1699022763.jpg' /></Link></SwiperSlide>
-      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/NEW-1x1-SweatsHoodies-70-COMMON-1699005018.jpg' /></Link></SwiperSlide>
-      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/Sale-1x1-Banner-buy-3-at-1199-1698766264.jpg' /></Link></SwiperSlide>
-      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/Bhupendra-Jogi-1x1-Banner--1--1698998581.jpg' /></Link></SwiperSlide>
+      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/1x1-Banner--3--1707200079.gif' /></Link></SwiperSlide>
+      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/Feb-1x1-Shirts-3-1707303638.jpg' /></Link></SwiperSlide>
+      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/Urban-cargo-Joggers-Common-1x1-banner-1707280995.jpg' /></Link></SwiperSlide>
+      <SwiperSlide><Link to='/all-products'><img className=' h-[400px] min-w-full lg:h-[500px] xl:h-[500px]' src='https://images.bewakoof.com/uploads/grid/app/BAGGY-JEANS-IK-RM-1x1-Banner-1707301356.gif' /></Link></SwiperSlide>
     </Swiper>
     </div>
   )
