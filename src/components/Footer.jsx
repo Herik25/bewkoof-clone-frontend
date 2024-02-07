@@ -22,18 +22,6 @@ function Footer() {
             <ul className="mt-8 flex gap-6">
               <li>
                 <Link
-                  to="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  <span className="sr-only">Facebook</span>
-                    <BsFacebook className=" text-2xl" />
-                </Link>
-              </li>
-
-              <li>
-                <Link
                   to="https://www.instagram.com/darksoul_5052/"
                   rel="noreferrer"
                   target="_blank"

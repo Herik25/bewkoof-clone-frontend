@@ -71,7 +71,7 @@ function Catagories() {
   const renderedCards1 = men.map((card, index) => {
     return (
       <Link to={card.src} className=" cursor-pointer" key={index}>
-        <img className=" px-2 h-[300px] min-w-[250px]" src={card.img} />
+        <img className=" px-2 h-[300px] min-w-[250px] lg:w-[250px]" src={card.img} />
         <h1 className="font-poppins font-bold text-center text-lg text-[#4d4d4d] py-4">
           {card.title}
         </h1>
@@ -81,7 +81,7 @@ function Catagories() {
   const renderedCards2 = women.map((card, index) => {
     return (
       <Link to={card.src} className=" cursor-pointer" key={index}>
-        <img className=" px-2 h-[300px] min-w-[250px]" src={card.img} />
+        <img className=" px-2 h-[300px] min-w-[250px] lg:w-[250px]" src={card.img} />
         <h1 className="font-poppins font-bold text-center text-lg text-[#4d4d4d] py-4">
           {card.title}
         </h1>
@@ -95,12 +95,12 @@ function Catagories() {
         TRENDING CATEGORIES
       </h1>
       <div className=" overflow-y-auto no-scrollbar mx-0 lg:my-5">
-        <div className="flex items-center justify-start flex-nowrap">
+        <div className="flex items-center justify-start xl:justify-center flex-nowrap">
           {renderedCards1}
         </div>
       </div>
       <div className=" overflow-y-auto no-scrollbar mx-0 lg:my-5">
-        <div className="flex items-center justify-start flex-nowrap">
+        <div className="flex items-center justify-start xl:justify-center flex-nowrap">
           {renderedCards2}
         </div>
       </div>

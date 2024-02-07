@@ -23,7 +23,7 @@ function AboutUs() {
               Our story starts with the name
               <br />{" "}
               <b className=" relative font-Montserrat">
-                Bewakoof
+                Syn
                 <sup className=" absolute text-[10px] translate-y-[13px] translate-x-[2px]">
                   ®
                 </sup>{" "}
@@ -32,13 +32,13 @@ function AboutUs() {
               .
             </span>
             <span className=" font-serif text-lg mt-6">
-              Society perceives Bewakoof as stupid. But what does society call
-              Bewakoof? Often, it’s anything different or anything that’s done
+              Society perceives Syn as stupid. But what does society call Syn?
+              Often, it’s anything different or anything that’s done
               differently.
             </span>
             <span className=" font-serif text-lg mt-6">
               Often when people have done the right thing, without caring about
-              what society thinks, they have been called Bewakoof. These are the
+              what society thinks, they have been called Syn. These are the
               people who have changed the world and made it a better place.
             </span>
           </div>
@@ -56,7 +56,7 @@ function AboutUs() {
         <div className=" flex flex-col items-center mt-20 mb-36">
           <div className=" flex flex-col">
             <span className=" text-2xl">
-              For us, Bewakoof is the spirit of looking at things differently.
+              For us, Syn is the spirit of looking at things differently.
             </span>
             <span className=" text-xl font-serif mt-10">
               Trying new things even when success is not guaranteed.
@@ -68,7 +68,7 @@ function AboutUs() {
             </span>
             <span className=" text-xl font-serif mt-16">
               <span className=" relative">
-                This was the spirit on which Bewakoof
+                This was the spirit on which Syn
                 <sup className=" absolute text-[8px] translate-y-[10px] translate-x-[2px]">
                   ®
                 </sup>{" "}
@@ -80,7 +80,7 @@ function AboutUs() {
             </span>
             <span className=" text-2xl font-serif mt-16">
               <span className=" relative">
-                It is about making a positive impact. That’s what Bewakoof
+                It is about making a positive impact. That’s what Syn
                 <sup className=" absolute text-[8px] translate-y-[10px] translate-x-[2px]">
                   ®
                 </sup>{" "}
@@ -102,7 +102,7 @@ function AboutUs() {
           <div className=" flex flex-col">
             <span className=" text-xl font-serif mt-16">
               <span className=" relative font-Montserrat font-bold text-2xl">
-                Bewakoof
+                Syn
                 <sup className=" absolute text-[8px] translate-y-[10px] translate-x-[2px]">
                   ®
                 </sup>{" "}
@@ -172,7 +172,7 @@ function AboutUs() {
             <span>
               What makes us{" "}
               <span className=" font-Montserrat">
-                Bewakoof <sup>®</sup>
+                Syn <sup>®</sup>
               </span>
             </span>
           </div>

@@ -18,9 +18,9 @@ function PrivacyPolicy() {
               <ul>
                 <li className="p-3 px-10">
                   <span className=" absolute translate-x-[-25px]">1.1</span>
-                  Bewakoof Brands Private Limited (<span>1.1</span>
+                  Syn Brands Private Limited (<span>1.1</span>
                   <strong>“Company”, “we”, “us” and “our”</strong>) respects the
-                  privacy of its users accessing its website at www.bewakoof.com
+                  privacy of its users accessing its website at www.supersyn.com
                   (<strong>“Website”</strong>). For the purposes of this privacy
                   policy (<strong>“Privacy Policy”</strong>) and wherever the
                   context so requires <strong>“you”</strong>,{" "}
@@ -449,7 +449,7 @@ function PrivacyPolicy() {
                   correct any information (which cannot be changed by logging
                   into your account/profile with the Company) at any time in
                   writing by sending an e-mail to us at{" "}
-                  <a href="mailto:care@bewakoof.com">care@bewakoof.com</a>, in
+                  <a href="mailto:care@Syn.com">care@Syn.com</a>, in
                   accordance with the terms of this Privacy Policy (please read
                   clause 6.5 below of this section 6 for more information on
                   this). However, please note that withdrawal of consent will
@@ -497,7 +497,7 @@ function PrivacyPolicy() {
                   <span className=" absolute translate-x-[-25px]">6.5</span>You may request for deletion of your personal
                   information by raising a request with Company by sending an
                   e-mail to us at{" "}
-                  <a href="mailto:care@bewakoof.com">care@bewakoof.com</a>. We
+                  <a href="mailto:care@Syn.com">care@Syn.com</a>. We
                   will verify such requests before acting upon it. You are
                   advised to mention “Delete my information” in the subject line
                   along with details as may be necessary to act upon the
@@ -579,7 +579,7 @@ function PrivacyPolicy() {
                 <li className="p-3 px-10">
                   <span className=" absolute translate-x-[-25px]">6.9</span>The Company respects your privacy and if you
                   do not want to receive any kind of communications from
-                  bewakoof.com or have any grievances to share, please report
+                  Syn.com or have any grievances to share, please report
                   to:{" "}
                 </li>
               </ul>
@@ -589,7 +589,7 @@ function PrivacyPolicy() {
             <p>Name: Labeesh Lakshmanan</p>
             <p>
               Email:{" "}
-              <a href="mailto:labeesh.l@bewakoof.com">labeesh.l@bewakoof.com</a>
+              <a href="mailto:labeesh.l@Syn.com">labeesh.l@Syn.com</a>
             </p>
           </div>
         </div>

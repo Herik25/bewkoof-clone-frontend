@@ -120,7 +120,7 @@ function EndingSection() {
         TRENDING CATEGORIES
       </h1>
       <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-40 overflow-y-auto no-scrollbar">
-        <div className="flex sm:flex-row items-center sm:justify-start my-3">
+        <div className="flex sm:flex-row items-center sm:justify-start lg:justify-center my-3">
           {renderedCards}
         </div>
       </div>

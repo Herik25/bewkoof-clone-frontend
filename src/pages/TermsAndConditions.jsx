@@ -13,13 +13,13 @@ function TermsAndConditions() {
           </h2>
           <ul>
             <li className="lists text">
-              Access to and use of Bewakoof.com and the products and service
+              Access to and use of Syn.com and the products and service
               available through the website are subject to the following terms,
               conditions and notices (<strong>“Terms of Service”</strong>). By
               browsing through these Terms of Service and using the services
               provided by our website (
               <a href="/" className=" text-blue-400 underline">
-                www.bewakoof.com
+                www.supersyn.com
               </a>
               ), you agree to all Terms of Service along with the Privacy Policy
               on our website, which may be updated by us from time to time.
@@ -37,9 +37,9 @@ function TermsAndConditions() {
             <li className="lists text">
               The domain name{" "}
               <a href="/" className=" text-blue-400 underline">
-                www.bewakoof.com
+                www.supersyn.com
               </a>{" "}
-              is a site operated by Bewakoof Br /ands Private Limited, a company
+              is a site operated by Syn Br /ands Private Limited, a company
               incorporated under laws of India with our registered office at
               Prithvi Complex, BLDG NO- P-8, Gr, 1st and 2nd Floor Village
               Kalher, Taluka Bhiwandi, Thane, Maharashtra, 421302 India (
@@ -49,10 +49,10 @@ function TermsAndConditions() {
           <ul>
             <li className=" text-sm font-bold mt-4 underline">Services</li>
             <li className="lists text">
-              Bewakoof.com is an online retailer of apparel and lifestyle
+              Syn.com is an online retailer of apparel and lifestyle
               products offered at great values to the consumer. Membership
               allows customers to purchase a variety of products. Upon placing
-              an order, Bewakoof.com shall ship the product to you and be
+              an order, Syn.com shall ship the product to you and be
               entitle to its payment for the service.
               <br />
               <br />
@@ -75,7 +75,7 @@ function TermsAndConditions() {
               the third party websites and/or their contents listed on our
               website (
               <a href="/" className=" text-blue-400 underline">
-                www.bewakoof.com
+                www.supersyn.com
               </a>{" "}
               ) and disclaim all our liabilities arising out of any or all third
               party websites.
@@ -84,7 +84,7 @@ function TermsAndConditions() {
               users of such websites in their personal capacity on any of the
               above mentioned links for sharing and/or listing purposes as well
               as any content and/or comments that may be posted by such user in
-              their personal capacity on any official webpage of Bewakoof on any
+              their personal capacity on any official webpage of Syn on any
               social networking platform.
             </li>
           </ul>
@@ -235,8 +235,8 @@ function TermsAndConditions() {
               ANY DAMAGES, ARISING OUT OF OR RELATED TO MISUSE OF PERSONAL
               INFORMATION OF THE CUSTOMER AND THE CUSTOMER IS SOLELY LIABLE FOR
               SUCH ACTS AND THEY ARE ADVISED NOT TO SHARE THEIR CONFIDENTIAL
-              INFORMATION LIKE BEWAKOOF PASSWORD, OTP, CREDIT/DEBIT CARD EXPIRY
-              AND CVV WITH ANYONE EVEN THOUGH THEY CLAIM TO BE A BEWAKOOF.COM
+              INFORMATION LIKE Syn PASSWORD, OTP, CREDIT/DEBIT CARD EXPIRY
+              AND CVV WITH ANYONE EVEN THOUGH THEY CLAIM TO BE A Syn.COM
               EMPLOYEE. NONE OF OUR EMPLOYEES WILL ASK FOR SUCH CONFIDENTIAL
               INFORMATION.
               <br />
@@ -245,10 +245,10 @@ function TermsAndConditions() {
               Terms of Service or the website please contact us at{" "}
               <a
                 className=" text-blue-400 underline"
-                href="mailto:care@bewakoof.com"
+                href="mailto:care@Syn.com"
               >
                 {" "}
-                care@bewakoof.com
+                care@Syn.com
               </a>
               .
             </li>
@@ -265,7 +265,7 @@ function TermsAndConditions() {
               <br />
               Head – Customer Experience
               <br />
-              Bewakoof Br /ands Private Limited
+              Syn Br /ands Private Limited
               <br />
               Prithvi Complex, BLDG NO- P-8, Gr, 1st and 2nd Floor Village
               Kalher, Taluka Bhiwandi, Thane, Maharashtra, 421302 India
@@ -273,10 +273,10 @@ function TermsAndConditions() {
               Contact:{" "}
               <a
                 className=" text-blue-400 underline"
-                href="mailto:care@bewakoof.com"
+                href="mailto:care@Syn.com"
               >
                 {" "}
-                care@bewakoof.com
+                care@Syn.com
               </a>
               <br />
               <br />
@@ -285,18 +285,18 @@ function TermsAndConditions() {
           </ul>
           <ul>
             <li className=" font-Montserrat font-bold text-xl">
-              Bewakoof TriBe.
+              Syn TriBe.
             </li>
             <li className="lists text">
-              Welcome to the terms and conditions ("Terms") for Bewakoof TriBe.
-              These Terms are between you and Bewakoof Br /ands Private Limited
-              and/or its affiliates ("Bewakoof" or "Us") and govern our
+              Welcome to the terms and conditions ("Terms") for Syn TriBe.
+              These Terms are between you and Syn Br /ands Private Limited
+              and/or its affiliates ("Syn" or "Us") and govern our
               respective rights and obligations. Please note that your use of
-              the Bewakoof.com website and subscription to Bewakoof TriBe
+              the Syn.com website and subscription to Syn TriBe
               membership are also governed by all other applicable terms,
-              conditions, limitations, and requirements on the Bewakoof.com
+              conditions, limitations, and requirements on the Syn.com
               website, all of which (as changed over time) are incorporated into
-              these Terms. If you sign up for a Bewakoof Tribe membership, you
+              these Terms. If you sign up for a Syn Tribe membership, you
               accept these terms, conditions, limitations and requirements.
               <br />
             </li>
@@ -310,7 +310,7 @@ function TermsAndConditions() {
               certain customers, which are subject to these Terms except as
               otherwise stated in the relevant promotional offers. Such trial or
               promotional memberships may be subject to conditions prescribed by
-              Bewakoof. These relevant conditions and the term / tenure for such
+              Syn. These relevant conditions and the term / tenure for such
               promotional memberships may be different from the Terms.
               <br />
             </li>
@@ -320,7 +320,7 @@ function TermsAndConditions() {
               Membership Term
             </li>
             <li className="lists text">
-              Bewakoof TriBe membership may be offered by Bewakoof for different
+              Syn TriBe membership may be offered by Syn for different
               terms and tenures. The key membership are described as under:
               <table className=" border-[1px] border-black text-xs">
                 <thead className="">
@@ -355,17 +355,17 @@ function TermsAndConditions() {
               <br />
             </li>
             <li>
-              You may select the Bewakoof TriBe membership plan of your choice
+              You may select the Syn TriBe membership plan of your choice
               and you can change the membership plan at any time. The payment
               method(s) eligible to be used for different TriBe membership plans
-              may vary, and Bewakoof reserves the sole right to determine the
+              may vary, and Syn reserves the sole right to determine the
               eligible payment methods for each TriBe membership plan.
             </li>
           </ul>
           <ul>
             <li className=" text-sm font-bold mt-4 underline">Fees</li>
             <li className="lists text">
-              The membership fee for Bewakoof TriBe is stated above, for
+              The membership fee for Syn TriBe is stated above, for
               different membership terms, such as a half-yearly or annual TriBe
               membership, which are offered. The TriBe membership fee is
               non-refundable except as expressly set forth in these Terms. All
@@ -378,37 +378,37 @@ function TermsAndConditions() {
               Your TriBe membership will automatically be cancelled after the
               period is completed and would not be auto-renewed. You will need
               to purchase the membership again to continue and enjoy the
-              privileges of a Bewakoof TriBe member.
+              privileges of a Syn TriBe member.
               <br />
               <br />
             </li>
             <li className="lists text">
               By signing-up for TriBe membership, you confirm that you are a
               resident of India. You cannot use a credit or debit card issued
-              outside India to pay for any membership fee for Bewakoof TriBe.
-              You cannot pay for membership fee for Bewakoof TriBe using Pay on
-              Delivery (POD). Paid Bewakoof TriBe membership only becomes
+              outside India to pay for any membership fee for Syn TriBe.
+              You cannot pay for membership fee for Syn TriBe using Pay on
+              Delivery (POD). Paid Syn TriBe membership only becomes
               effective upon successful authorization of payment through the
-              Bewakoof.com website (as the case may be).
+              Syn.com website (as the case may be).
               <br />
               <br />
             </li>
           </ul>
           <ul>
             <li className=" text-sm font-bold mt-4 underline">
-              Delivery Benefits and Eligible Purchases for Bewakoof TriBe
+              Delivery Benefits and Eligible Purchases for Syn TriBe
             </li>
             <li className="lists text">
-              Bewakoof TriBe Delivery Benefits depends upon inventory
+              Syn TriBe Delivery Benefits depends upon inventory
               availability, order deadlines, and the delivery address. They are
-              limited to certain products sold on the Bewakoof.com website.
-              Products eligible for Bewakoof TriBe will be designated as such on
+              limited to certain products sold on the Syn.com website.
+              Products eligible for Syn TriBe will be designated as such on
               their product pages. If only some items in your order are eligible
-              for Bewakoof TriBe, you will pay applicable charges for the
+              for Syn TriBe, you will pay applicable charges for the
               ineligible items. For items that are not available for fast
-              delivery, Bewakoof TriBe customers will receive free standard
+              delivery, Syn TriBe customers will receive free standard
               delivery. Changing or combining orders, or changing your delivery
-              address, speed, or preferences might affect Bewakoof TriBe
+              address, speed, or preferences might affect Syn TriBe
               eligibility. Certain purchases may only be entitled to standard
               shipping because of their size, weight, and other shipping
               characteristics.
@@ -423,22 +423,22 @@ function TermsAndConditions() {
               discretion.
             </li>
             <li className=" ml-[15px] list-disc">
-              We may send you email and other communications related to Bewakoof
-              TriBe and your Bewakoof TriBe membership (regardless of any
-              settings or preferences related to your Bewakoof account).
+              We may send you email and other communications related to Syn
+              TriBe and your Syn TriBe membership (regardless of any
+              settings or preferences related to your Syn account).
             </li>
             <li className=" ml-[15px] list-disc">
-              You may not transfer or assign your Bewakoof TriBe membership or
-              any Bewakoof TriBe benefits, except as allowed in these Terms.
+              You may not transfer or assign your Syn TriBe membership or
+              any Syn TriBe benefits, except as allowed in these Terms.
             </li>
             <li className=" ml-[15px] list-disc">
-              Bewakoof TriBe members are not permitted to purchase products for
+              Syn TriBe members are not permitted to purchase products for
               the purpose of resale, rental, or to ship to their customers or
-              potential customers using Bewakoof TriBe benefits.
+              potential customers using Syn TriBe benefits.
             </li>
             <li className=" ml-[15px] list-disc">
-              From time to time, Bewakoof may choose in its sole discretion to
-              add or remove Bewakoof TriBe membership benefits.
+              From time to time, Syn may choose in its sole discretion to
+              add or remove Syn TriBe membership benefits.
             </li>
           </ul>
           <ul>
@@ -446,9 +446,9 @@ function TermsAndConditions() {
               Membership Activation
             </li>
             <li className="lists text">
-              Your paid Bewakoof TriBe membership will be activated only on
-              successful payment for Bewakoof TriBe membership made through the
-              Bewakoof.com website.
+              Your paid Syn TriBe membership will be activated only on
+              successful payment for Syn TriBe membership made through the
+              Syn.com website.
             </li>
           </ul>
           <ul>
@@ -456,9 +456,9 @@ function TermsAndConditions() {
               Membership Cancellation
             </li>
             <li className="lists text">
-              You may cancel your Paid Bewakoof TriBe membership any time by
+              You may cancel your Paid Syn TriBe membership any time by
               visiting Your Account and adjusting your membership settings. If
-              you cancel a Bewakoof TriBe membership, the membership fee will be
+              you cancel a Syn TriBe membership, the membership fee will be
               not be refunded in any case.
             </li>
           </ul>
@@ -467,13 +467,13 @@ function TermsAndConditions() {
               Termination by Us
             </li>
             <li className="lists text">
-              We may terminate your Bewakoof TriBe membership at our discretion
+              We may terminate your Syn TriBe membership at our discretion
               without notice. If we do so, we will issue a credit note to you
               and give a prorated refund based on the remaining term of your
               then membership term, whether annual or half-yearly. However, we
               will not give any refund for termination related to conduct that
               we determine, in our discretion, violates these Terms or any
-              applicable law, involves fraud or misuse of the Bewakoof TriBe
+              applicable law, involves fraud or misuse of the Syn TriBe
               membership, or is harmful to our interests or another user. Our
               failure to insist upon or enforce your strict compliance with
               these Terms will not constitute a waiver of any of our rights.
@@ -485,16 +485,16 @@ function TermsAndConditions() {
             </li>
             <li className="lists text">
               IN ADDITION TO OTHER LIMITATIONS AND EXCLUSIONS MENTIONED AT
-              BEWAKOOF.COM WEBSITE, IN NO EVENT WILL WE OR OUR DIRECTORS,
+              Syn.COM WEBSITE, IN NO EVENT WILL WE OR OUR DIRECTORS,
               OFFICERS, EMPLOYEES, AGENTS OR OTHER REPRESENTATIVES BE LIABLE FOR
               ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR
               PUNITIVE DAMAGES, OR ANY OTHER DAMAGES OF ANY KIND, ARISING OUT OF
-              OR RELATED TO BEWAKOOF TRIBE. OUR TOTAL LIABILITY, WHETHER IN
+              OR RELATED TO Syn TRIBE. OUR TOTAL LIABILITY, WHETHER IN
               CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, WILL
               NOT EXCEED THE LAST MEMBERSHIP FEE YOU PAID. THESE EXCLUSIONS AND
               LIMITATIONS OF LIABILITY WILL APPLY TO THE FULLEST EXTENT
               PERMITTED BY LAW AND WILL SURVIVE CANCELLATION OR TERMINATION OF
-              YOUR BEWAKOOF TRIBE MEMBERSHIP.
+              YOUR Syn TRIBE MEMBERSHIP.
             </li>
           </ul>
         </div>

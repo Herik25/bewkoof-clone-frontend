@@ -11,15 +11,19 @@ export default function MobileMenu({ open, setOpen, user }) {
             <div className="flex h-full flex-col overflow-y-scroll bg-[#f7f7f7] py-6 shadow-xl">
               <div className=" flex justify-between px-4 pb-4 sm:px-6 border-b-[#ccc] border-b-[1px]">
                 <div className="text-base font-semibold leading-6 text-gray-900">
-                  Hello, Shopper
+                  {user === null || user.message === "Unauthorized" ? (
+                    <span>Hello, Guest</span>
+                  ) : (
+                    <span>Hello, Shopper</span>
+                  )}
                 </div>
                 <button
-                type="button"
-                className=" rounded-md text-[#000] hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                onClick={() => setOpen(false)}
-              >
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
+                  type="button"
+                  className=" rounded-md text-[#000] hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                  onClick={() => setOpen(false)}
+                >
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
               </div>
               <div className="relative my-3 flex-1 sm:px-6">
                 <div className=" text-[#adabab] px-4 mb-3 text-xs font-bold">

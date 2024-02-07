@@ -100,10 +100,7 @@ function CartSection() {
                     Cart
                   </span>
                 </div>
-                <Link
-                  to="/"
-                  className=" mr-2"
-                >
+                <Link to="/" className=" mr-2">
                   <img src="/logo.png" className="h-11 w-11 p-1" alt="Logo" />
                 </Link>
               </div>
@@ -430,21 +427,21 @@ function CartSection() {
       ) : (
         <div className="h-screen w-full overflow-hidden">
           <div className="h-[95%]">
-            <div className="flex mt-1 pb-3 h-12 w-full items-center justify-between p-2 border-b-[1px] border-[#ccc]">
-              <div className="ml-44 flex items-center">
-                <img src="logo.png" className="h-10 w-10 p-1" alt="Logo" />
-                <div className="font-BungeeSpice text-4xl mt-0 pl-2 translate-y-[1px]">
-                  SYN
+            <div className=" flex justify-between items-center h-16 bg-white border-b-[2px] border-b-[#f0f0f0] ">
+              <div className=" flex items-center ml-2">
+                <div
+                  onClick={() => navigate(-1)}
+                  className=" p-3 border-[2px] border-[#f0f0f0] rounded-lg shadow cursor-pointer transition ease-in duration-200 hover:shadow-none hover:text-gray-600"
+                >
+                  <ArrowLeftIcon className=" h-5 w-5" />
                 </div>
+                <span className=" ml-2 text-xl text-[#333] font-Montserrat ">
+                  Cart
+                </span>
               </div>
-              <div className=" mr-44 flex flex-col items-start">
-                <div className=" text-[10px] font-Montserrat font-bold text-[#333] opacity-50">
-                  Signed as
-                </div>
-                <div className=" min-w-[250px] text-md font-karala font-semibold text-[#333]">
-                  {user?.email}
-                </div>
-              </div>
+              <Link to="/" className=" mr-2">
+                <img src="/logo.png" className="h-11 w-11 p-1" alt="Logo" />
+              </Link>
             </div>
             <div className=" flex flex-col items-center mt-2 w-full py-5 font-Montserrat">
               <div className="">
