@@ -45,23 +45,23 @@ function AdminProductEditForm() {
 
   useEffect(() => {
     if (selectedProduct) {
-      setValue("name", selectedProduct.name || '');
-      setValue("brand", selectedProduct.brand || '');
-      setValue("desc", selectedProduct.desc || '');
-      setValue("discountPrice", selectedProduct.discountPrice || '');
-      setValue("discount", selectedProduct.discount || '');
-      setValue("price", selectedProduct.price || '');
-      setTags(selectedProduct.tags || '');
-      setValue("imgTag", selectedProduct.imgTag || '');
-      setValue("rating", selectedProduct.rating || '');
-      setValue("gender", selectedProduct.gender || '');
-      setValue("color", selectedProduct.color || '');
-      setValue("category", selectedProduct.category || '');
-      setValue("fit", selectedProduct.fit || '');
-      setIsBestSeller(selectedProduct.bestseller || '');
-      setSelectedSizes(selectedProduct.selectedSizes || '');
-      setValue("sleve", selectedProduct.sleve || '');
-      setImages(selectedProduct.images || '');
+      setValue("name", selectedProduct.name || "");
+      setValue("brand", selectedProduct.brand || "");
+      setValue("desc", selectedProduct.desc || "");
+      setValue("discountPrice", selectedProduct.discountPrice || "");
+      setValue("discount", selectedProduct.discount || "");
+      setValue("price", selectedProduct.price || "");
+      setTags(selectedProduct.tags || "");
+      setValue("imgTag", selectedProduct.imgTag || "");
+      setValue("rating", selectedProduct.rating || "");
+      setValue("gender", selectedProduct.gender || "");
+      setValue("color", selectedProduct.color || "");
+      setValue("category", selectedProduct.category || "");
+      setValue("fit", selectedProduct.fit || "");
+      setIsBestSeller(selectedProduct.bestseller || "");
+      setSelectedSizes(selectedProduct.selectedSizes || "");
+      setValue("sleve", selectedProduct.sleve || "");
+      setImages(selectedProduct.images || "");
     }
   }, [selectedProduct, setValue]);
 
@@ -77,16 +77,16 @@ function AdminProductEditForm() {
     const newValue = e.target.value.toUpperCase();
     setValue("imgTag", newValue);
   };
-  
-  const handleDelete = () => {
-    const product = {...selectedProduct}
-    product.deleted = true
-    // console.log(product);
-    dispatch(updateProductAsync(product))
-    navigate('/admin')
-  }
 
-  const sizes = ["S","M", "L", "XL", "2XL", "3XL"];
+  const handleDelete = () => {
+    const product = { ...selectedProduct };
+    product.deleted = true;
+    // console.log(product);
+    dispatch(updateProductAsync(product));
+    navigate("/admin");
+  };
+
+  const sizes = ["S", "M", "L", "XL", "2XL", "3XL"];
 
   return (
     <div className=" min-h-screen font-Montserrat bg-[#f5f5f5]">
@@ -100,7 +100,7 @@ function AdminProductEditForm() {
           </Link>
           <div className=" flex flex-col ml-4">
             <span className=" font-bold text-xs text-[#b4b4b4]">
-              Back To List  
+              Back To List
             </span>
             <span className=" font-bold mt-[2px] font-base">Edit Product</span>
           </div>
@@ -120,17 +120,17 @@ function AdminProductEditForm() {
             images,
             tags,
             selectedSizes,
-            bestSeller: isBestSeller,
-            id: parmas.id
+            bestseller: isBestSeller,
+            id: parmas.id,
           };
           // console.log(product);
           dispatch(updateProductAsync(product));
-          setImages([])
-          setTags([])
-          setSelectedSizes([])
-          setIsBestSeller(false)
-          reset()
+          setImages([]);
+          setTags([]);
+          setSelectedSizes([]);
+          setIsBestSeller(false);
           reset();
+          navigate("/admin");
         })}
         className=" grid grid-cols-[4fr_6fr] gap-6 mx-44 mt-5"
       >
@@ -167,7 +167,7 @@ function AdminProductEditForm() {
               className=" flex items-center mt-4 p-2 border-[#f0f0f0] border-[2px] rounded-md"
               onClick={() => setOpen(!open)}
             >
-              <FiUpload className=" mr-2" /> Add Images
+              <FiUpload className=" mr-2" /> Edit Images
             </button>
             {open && (
               <div>
@@ -256,7 +256,7 @@ function AdminProductEditForm() {
                   htmlFor="discountPrice"
                   className=" text-[#858585] font-bold text-xs"
                 >
-                  Orriginal Price
+                  Original Price
                 </label>
                 <input
                   className=" pl-5 border-[2px] border-[#f0f0f0] rounded-md focus:ring-0 focus:border-gray-300 focus:outline-none"
@@ -559,7 +559,9 @@ function AdminProductEditForm() {
                             type="checkbox"
                             id={size}
                             value={size}
-                            checked={selectedSizes?.includes(size) ? true : false}
+                            checked={
+                              selectedSizes?.includes(size) ? true : false
+                            }
                             onChange={() => handleSizeChange(size)}
                             className="hidden"
                           />

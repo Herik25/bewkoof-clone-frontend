@@ -10,13 +10,14 @@ function BestSeller() {
   const products = useSelector(selectAllProducts);
   const bestSellerProducts = products.filter(
     (product) => product.bestseller === true
-  ).slice(0, 6)
+  )
+  const shuffleBestSeller = bestSellerProducts.sort(() => Math.random() - 0.5).slice(0, 6)
   
   useEffect(() => {
     dispatch(fetchAllProductsAsync())
   }, [dispatch])
 
-  const renderedProducts = bestSellerProducts.map((product, index) => {
+  const renderedProducts = shuffleBestSeller.map((product, index) => {
     return (
       <Link
         key={index}

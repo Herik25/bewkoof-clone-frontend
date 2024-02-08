@@ -76,7 +76,7 @@ function AdminProductForm() {
       </div>
       <form
         onSubmit={handleSubmit((data) => {
-          const product = {...data, thumbnail: images[0], images, tags, selectedSizes, bestSeller: isBestSeller}
+          const product = {...data, thumbnail: images[0], images, tags, selectedSizes, bestseller: isBestSeller}
           // console.log(product);
           dispatch(uploadProductAsync(product))
           setImages([])
@@ -204,7 +204,7 @@ function AdminProductForm() {
                   htmlFor="discountPrice"
                   className=" text-[#858585] font-bold text-xs"
                 >
-                  Orriginal Price
+                  Original Price
                 </label>
                 <input
                   className=" pl-5 border-[2px] border-[#f0f0f0] rounded-md focus:ring-0 focus:border-gray-300 focus:outline-none"
