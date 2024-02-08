@@ -495,6 +495,7 @@ function AdminProductEditForm() {
                     <option value="sweater">Sweater</option>
                     <option value="tracksuit">Tracksuit</option>
                     <option value="casualpants">Casual Pants</option>
+                    <option value="casualpants">Dress</option>
                   </select>
                 </div>
                 <div className=" flex flex-col ml-2">
